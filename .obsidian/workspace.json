@@ -1,0 +1,235 @@
+{
+  "main": {
+    "id": "69599c43c2cc028d",
+    "type": "split",
+    "children": [
+      {
+        "id": "8bfff3ab769aaef0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "67fc5145be75ac0d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "wiki/personal/LLM Study Plan.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "LLM Study Plan"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "c7bbe330dcefeaf9",
+    "type": "split",
+    "children": [
+      {
+        "id": "116b0bf9c1cb4ac0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4746263bdce3eb95",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "52f08badf3826507",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "257338bc117ddde6",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "d07ab2a7029888ec",
+    "type": "split",
+    "children": [
+      {
+        "id": "823076e6491395b0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4955fb11c6a2d728",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "llm-wiki.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for llm-wiki"
+            }
+          },
+          {
+            "id": "9cff8705a02aba46",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "llm-wiki.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from llm-wiki"
+            }
+          },
+          {
+            "id": "2efed9a8f8ae2413",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "6fd33bafea00f251",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "ea724a980eb441c2",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "llm-wiki.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of llm-wiki"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "67fc5145be75ac0d",
+  "lastOpenFiles": [
+    "wiki/personal/My LLM Learning Sequence.md",
+    "wiki/personal/LLM Study Plan.md",
+    "raw/web_agent/web_agent_abstract.md",
+    "wiki/research/Web Agent Architecture.md",
+    "wiki/research/Taxy.ai Implementation.md",
+    "llm-wiki.md",
+    "wiki/research/Action Execution - JS vs CDP.md",
+    "wiki/log.md",
+    "wiki/research/Browser-Use Implementation.md",
+    "raw/web_agent/browser-use/skills/cloud/references/guides/tools-integration.md",
+    "raw/web_agent/browser-use/skills/cloud/references/guides/subagent.md",
+    "raw/web_agent/browser-use/skills/cloud/references/guides/chat-ui.md",
+    "raw/web_agent/browser-use/examples/apps/ad-use/output/landing_page_20250908_150030.png",
+    "raw/web_agent/browser-use/examples/apps/ad-use/output/ad_20250908_150030.png",
+    "raw/web_agent/browser-use/tests/ci/security/test_sensitive_data.py",
+    "raw/web_agent/browser-use/tests/ci/security/test_security_flags.py",
+    "raw/web_agent/browser-use/tests/ci/security/test_ip_blocking.py",
+    "raw/web_agent/browser-use/tests/ci/security/test_domain_filtering.py",
+    "raw/web_agent/browser-use/tests/ci/models/test_llm_schema_optimizer.py",
+    "raw/web_agent/browser-use/tests/ci/models/test_llm_openai.py",
+    "raw/web_agent/browser-use/tests/ci/models/test_llm_google.py",
+    "raw/web_agent/browser-use/tests/ci/models/test_llm_browseruse.py",
+    "raw/web_agent/browser-use/tests/ci/models/test_llm_azure.py",
+    "raw/web_agent/browser-use/tests/ci/models/test_llm_anthropic.py",
+    "raw/web_agent/browser-use/skills/open-source/references/tools.md",
+    "raw/web_agent/browser-use/skills/open-source/references/quickstart.md",
+    "raw/web_agent/browser-use/skills/open-source/references/monitoring.md",
+    "raw/web_agent/browser-use/skills/open-source/references/models.md",
+    "raw/web_agent/browser-use/skills/open-source/references/integrations.md",
+    "raw/web_agent/browser-use/skills/open-source/references/examples.md",
+    "raw/web_agent/browser-use/skills/open-source/references/browser.md",
+    "raw/web_agent/browser-use/skills/open-source/references/agent.md",
+    "raw/web_agent/browser-use/skills/open-source/references/actor.md",
+    "raw/web_agent/browser-use/skills/cloud/references/sessions.md",
+    "raw/web_agent/browser-use/skills/cloud/references/quickstart.md",
+    "raw/web_agent/browser-use/skills/cloud/references/patterns.md",
+    "raw/web_agent/browser-use/skills/cloud/references/features.md",
+    "raw/web_agent/browser-use/skills/cloud/references/browser-api.md",
+    "raw/web_agent/browser-use/static/browser-use.png",
+    "raw/web_agent/browser-use/static/browser-use-dark.png",
+    "raw/web_agent/browser-use/static/accuracy_by_model_light.png",
+    "raw/web_agent/browser-use/static/accuracy_by_model_dark.png",
+    "raw/web_agent/browser-use/static/NiceHack69.png",
+    "raw/web_agent/taxyai/src/assets/img/logo.svg",
+    "raw/web_agent/taxyai/src/assets/img/logo.png",
+    "raw/web_agent/taxyai/src/assets/img/icon-34.png"
+  ]
+}
