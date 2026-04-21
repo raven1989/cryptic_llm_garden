@@ -19,4 +19,77 @@ Cloned and moved the Taxy.ai open-source repository to `raw/web_agent/taxyai/`. 
 Cloned and moved the `browser-use/browser-use` repository to `raw/web_agent/browser-use/`. Analyzed its modernized architecture, discovering a shift away from JS injection toward pure Python Chrome DevTools Protocol (`cdp_use`) for stealthy DOM snapshotting and hardware-simulated mouse actions. Created `wiki/research/Browser-Use Implementation.md`. Updated the index and entity definitions accordingly.
 
 ## [2026-04-09] Synthesis | Action Execution (JS vs CDP)
-Synthesized our conversation regarding the limitations of JavaScript execution in modern web environments into a new research page at `wiki/research/Action Execution - JS vs CDP.md`. Outlined the importance of `isTrusted` flags, React state management, and z-index visual overlays when building Web Agents. Updated `wiki/entities/Web Agent.md` and `wiki/entities/DOM State Compression.md` with links to this new concept.
+Synthesized our conversation regarding the limitations of JavaScript execution in modern web environments into a new research page at `wiki/research/Action Execution - JS vs CDP.md`. Outlined the importance of `isTrusted` flags, React state management, and z-index visual overlays when building Web Agents. Updated `wiki/entities/Web Agent.md` and `wiki/entities/DOM State Compression.md` with links to this new concept.## [2026-04-13] Create | [[Layer 3 - Architectures and Operators Syllabus]] generated from raw/llm_study_plan/Outline_Layer3.md
+## [2026-04-13] Synthesis | Self-Attention QKV Weight Sharing
+Synthesized a detailed mathematical explanation of why Q, K, and V matrices do not share weights in vanilla self-attention. Specifically documented the "Identity Matrix Degeneration" effect caused by $W_Q = W_K$ and the necessity of breaking symmetry. Created the new entity page `wiki/entities/Self-Attention Mechanism.md` and updated `wiki/index.md`.
+
+## [2026-04-14] Ingest | Why is Attention divided by √dₖ
+Ingested the raw source `raw/transformer/Why is Attention divided by √dₖ.md`. Created a new research summary page at `wiki/research/Why is Attention divided by Root d_k.md`. Updated the `wiki/entities/Self-Attention Mechanism.md` page with a new section on Scaled Dot-Product Attention (variance growth and vanishing gradients). Updated `wiki/index.md`.
+
+## [2026-04-14] Ingest | KV Cache Synthesis
+* Synthesized existing knowledge about KV Cache optimization from `raw/llm_study_plan/Outline_Layer3.md` and related notes.
+* Created `wiki/entities/KV Cache.md`.
+* Updated `wiki/index.md`.
+
+## [2026-04-15] Ingest | KV Cache Deep Dive
+* Extracted implementation details from `raw/LLM/Understanding and coding the KV Cache in LLMs from Scratch.md` and `raw/LLM/KV Cache Explained.md`.
+* Updated `wiki/entities/KV Cache.md` to explain VRAM usage, per-layer cache independence, memory fragmentation (torch.cat vs pre-allocation), sliding window truncation, and cache cleanup lifecycle.
+
+## [2026-04-15] Ingest | LLM Inference VRAM & Compute Estimation
+* Ingested `raw/LLM/大模型推理显存和计算量估计方法.md`.
+* Created `wiki/research/LLM Inference VRAM and Compute Estimation.md` detailing exact mathematical formulas for Prefill/Decode FLOPs and KV Cache memory footprint.
+* Updated `wiki/entities/KV Cache.md` with the explicit byte-size calculation formula showing the impact of GQA (`num_key_value_heads`).
+* Updated `wiki/index.md`.
+
+## [2026-04-16] Ingest | Encoder-Only, Encoder-Decoder, and Decoder-Only Models
+* Ingested `raw/LLM/ Saptarshi Datta A curious explorer of Technology and Life   Kolkata, India datta.3@iitj.ac.in saptarshidatta97 Encoder Only Encoder Decoder And Decoder Only Models.md`.
+* Created a new summary page at `wiki/research/Encoder Only, Encoder Decoder, And Decoder Only Models.md`.
+* Created dedicated entity pages for `wiki/entities/Encoder-Only Models.md`, `wiki/entities/Encoder-Decoder Models.md`, and `wiki/entities/Decoder-Only Models.md`.
+* Updated `wiki/entities/Transformers.md` to link to these new entity pages.
+* Updated `wiki/index.md` with links to the new research summary and entity pages.
+
+## [2026-04-17] Ingest & Synthesis | Positional Encoding
+* Ingested `raw/LLM/You could have designed state of the art positional encoding.md` explaining the evolutionary history of position embeddings from Integer to RoPE.
+* Synthesized an answer answering why Transformers need positional encoding, detailing early flaws (Integer/Binary), Sinusoidal encoding, Rotary Position Embedding (RoPE), and ALiBi.
+* Created new entity page `wiki/entities/Positional Encoding.md`.
+* Updated `wiki/entities/Transformers.md` to link to the new entity.
+* Updated `wiki/index.md` with the new entity page.
+
+## [2026-04-17] Enhancement | Positional Encoding Videos
+* Embedded natively supported `.mp4` video files from `raw/LLM/` into `wiki/entities/Positional Encoding.md` to visually demonstrate the mathematical differences between Integer, Binary, Sinusoidal, and Rotary Position Encodings.
+
+## [2026-04-17] Maintenance | Fix KaTeX rendering in raw/LLM source
+* Repaired multiple LaTeX syntax errors in `raw/LLM/You could have designed state of the art positional encoding.md` where matrices and aligned equations were missing proper `\begin{bmatrix}`, `\begin{pmatrix}`, and `\begin{aligned}` wrappers, causing KaTeX parsing errors in Obsidian.
+
+## [2026-04-17] Maintenance | Fix Unicode Math Anomaly in raw/LLM source
+* Replaced anomalous Unicode combining characters (like the `U+20D7` combining right arrow) and non-standard spacing (`\mid` instead of `|`, invisible `U+2061` function application) with standard, clean KaTeX (`\vec{a} \cdot \vec{b} = |\vec{a}| |\vec{b}| \cos \theta`) in `raw/LLM/You could have designed state of the art positional encoding.md` to prevent rendering glitches in Obsidian's Edit Mode.
+
+## [2026-04-17] Maintenance | Fix KaTeX rendering in 十分钟看懂RoPE.md
+* Cleaned up invalid left/right delimiter hacks (`\left[\right.` -> `[`, `\left{\right.` -> `\{`) throughout `raw/LLM/十分钟看懂RoPE.md` which were causing KaTeX parsing failures in Obsidian.
+* Replaced `\begin{matrix}` wrappers with `\begin{aligned}` or `\begin{pmatrix}` where alignment and matrix columns were failing.
+
+## [2026-04-17] Maintenance | Fix \hdots KaTeX error in raw/LLM/十分钟看懂RoPE.md
+* Replaced instances of the undefined control sequence `\hdots` with the standard KaTeX command `\cdots` in the 1.4 section matrix to resolve a final parsing error.
+
+## [2026-04-17] Ingest | 十分钟看懂RoPE
+* Ingested `raw/LLM/十分钟看懂RoPE.md` which contains a highly technical deep dive into Rotary Position Embedding.
+* Created `wiki/research/十分钟看懂RoPE Summary.md` to summarize the mathematical themes of the article.
+* Created `wiki/entities/RoPE.md` as a dedicated entity page. Documented the $d$-dimensional block-diagonal matrix formulation, efficient Hadamard product computation, Long-Range Decay (via Abel Transformation), Length Extrapolation properties (orthogonal matrices), and the complex-domain PyTorch implementation used in LLaMA.
+* Updated `wiki/entities/Positional Encoding.md` to point users seeking deeper math/code toward the new `[[RoPE]]` page.
+* Updated `wiki/index.md` with links to the new research summary and entity pages.
+
+## [2026-04-17] Enhancement | Add missing inner product proof to RoPE
+* Appended the relative inner product function $g(\mathbf{x}_m, \mathbf{x}_n, m-n)$ to the `wiki/entities/RoPE.md` deep dive to explicitly mathematically prove that absolute rotation of query and key vectors naturally resolves to a single rotation based on their relative distance angle $(m-n)\theta$.
+## [2026-04-21] Ingest | ALiBi Positional Encoding
+* Ingested `raw/LLM/大模型位置编码-ALiBi位置编码.md` discussing Attention with Linear Biases (ALiBi) and length extrapolation.
+* Created a summary page at `wiki/research/大模型位置编码-ALiBi位置编码 Summary.md`.
+* Created a detailed entity page `wiki/entities/ALiBi.md` complete with the core equation, the scalar $m$ calculation, and an ASCII visualization matrix of the linear bias operation before softmax.
+* Updated `wiki/index.md` and `wiki/entities/Positional Encoding.md` to link the new entity and concepts.
+
+## [2026-04-21] Ingest | 大模型原理与架构 (Chapter 4)
+* Ingested Chapter 4 (`raw/LLM/大模型原理与架构/04_position_encoding/`) covering the evolution of Position Encoding designs.
+* Updated `wiki/entities/Positional Encoding.md` to include:
+  * Learnable Positional Encodings (GPT/BERT) and its fundamental inability to extrapolate.
+  * T5's bucked relative position bias and Transformer-XL interactions.
+  * A concluding analysis on the 4 major architectural shifts in Positional Encodings (Absolute->Relative, Embedding->Attention, Fixed->Extrapolatable, Complex->Simple) and a markdown comparison matrix.
+* Updated `wiki/entities/RoPE.md` to document explicit length extrapolation optimization techniques (`Position Interpolation`, `NTK-aware scaling`, `YaRN`) and elaborated on the "rotation cancellation" effect that mathematically enforces Long-Range Decay (implicit locality bias).

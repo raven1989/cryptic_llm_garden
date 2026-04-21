@@ -10,9 +10,9 @@ The fundamental architecture behind most modern Large Language Models (LLMs). Th
 ## Key Paradigms
 
 *   **Dense Transformer:**
-    *   **Decoder-only:** The dominant architecture (e.g., GPT, Llama). Suited for auto-regressive Next-Token Prediction and Few-shot learning due to its single-directional attention.
-    *   **Encoder-Decoder:** (e.g., T5, BART). Suited for seq2seq tasks like translation and summarization, though less common in the largest models today.
-    *   **Encoder-only:** (e.g., BERT). Primarily used for embedding generation, as in retrieval models for [[Vector Database]]s.
+    *   **[[Decoder-Only Models|Decoder-only]]:** The dominant architecture (e.g., GPT, Llama). Suited for auto-regressive Next-Token Prediction and Few-shot learning due to its single-directional attention.
+    *   **[[Encoder-Decoder Models|Encoder-Decoder]]:** (e.g., T5, BART). Suited for seq2seq tasks like translation and summarization, though less common in the largest models today.
+    *   **[[Encoder-Only Models|Encoder-only]]:** (e.g., BERT). Primarily used for embedding generation, as in retrieval models for [[Vector Database]]s.
 
 *   **Mixture of Experts (MoE):**
     *   **Concept:** Increases parameter count without increasing single-pass computation (FLOPs). Replaces the Feed-Forward Network (FFN) with multiple "Expert" networks.
@@ -27,7 +27,7 @@ The fundamental architecture behind most modern Large Language Models (LLMs). Th
 
 ## Micro-Designs & Optimizations
 
-*   **Attention Variants:** Multi-Query Attention (MQA) shares KV matrices across heads to reduce KV Cache size. Grouped-Query Attention (GQA), the current standard, groups heads to share KV matrices, offering a balance between speed and quality.
+*   **Multi-Query Attention (MQA):** Shares KV matrices across heads to reduce KV Cache size. Grouped-Query Attention (GQA), the current standard, groups heads to share KV matrices, offering a balance between speed and quality.
 *   **FlashAttention (v1/v2/v3):** An IO-aware optimization. Uses "Tiling" to compute Softmax and matrix multiplication entirely within the fast SRAM, avoiding slow HBM reads/writes.
-*   **Position Embeddings:** Rotary Position Embedding (RoPE) maps tokens to complex space and rotates them, elegantly combining absolute and relative positions. Highly effective for length extrapolation.
+*   **[[Positional Encoding]]:** Techniques to inject sequence order. Includes Rotary Position Embedding (RoPE) which maps tokens to complex space and rotates them, and ALiBi which applies linear decay to attention scores.
 *   **Normalization:** RMSNorm replaces LayerNorm, skipping mean calculation for speed. Pre-Norm architecture places normalization before Attention/FFN to prevent deep gradient explosion.
