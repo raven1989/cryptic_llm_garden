@@ -2,7 +2,7 @@
 tags: [positional-encoding, alibi, summary, length-extrapolation]
 aliases: []
 date: 2026-04-21
-sources: ["raw/LLM/大模型位置编码-ALiBi位置编码.md"]
+sources: ["[[raw/LLM/大模型位置编码-ALiBi位置编码.md]]"]
 ---
 # 大模型位置编码-ALiBi位置编码 Summary
 

@@ -7,8 +7,7 @@ tags:
 aliases:
   - Web Agent Architecture
 date: 2026-04-09
-sources:
-  - raw/web_agent/web_agent_abstract.md
+sources: ["[[raw/web_agent/web_agent_abstract.md]]"]
 ---
 
 # Web Agent Architecture: 4 Approaches

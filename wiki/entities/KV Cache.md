@@ -2,7 +2,7 @@
 tags: [llm, inference, memory, optimization]
 aliases: [Key-Value Cache]
 date: 2026-04-15
-sources: [raw/llm_study_plan/Outline_Layer3.md, raw/LLM/KV Cache Explained.md, raw/LLM/Understanding and coding the KV Cache in LLMs from Scratch.md]
+sources: ["[[raw/llm_study_plan/Outline_Layer3.md]]", "[[raw/LLM/KV Cache Explained.md]]", "[[raw/LLM/Understanding and coding the KV Cache in LLMs from Scratch.md]]"]
 ---
 # KV Cache
 

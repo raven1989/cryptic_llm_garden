@@ -93,3 +93,23 @@ Ingested the raw source `raw/transformer/Why is Attention divided by √dₖ.md`
   * T5's bucked relative position bias and Transformer-XL interactions.
   * A concluding analysis on the 4 major architectural shifts in Positional Encodings (Absolute->Relative, Embedding->Attention, Fixed->Extrapolatable, Complex->Simple) and a markdown comparison matrix.
 * Updated `wiki/entities/RoPE.md` to document explicit length extrapolation optimization techniques (`Position Interpolation`, `NTK-aware scaling`, `YaRN`) and elaborated on the "rotation cancellation" effect that mathematically enforces Long-Range Decay (implicit locality bias).
+
+## [2026-05-11] Ingest & Synthesis | Multi-Head Attention
+* Synthesized the explanations for matrix dimensions and functional advantages of Multi-Head Attention based on `raw/LLM/大模型原理与架构/02_attention/2.3_multi_head.md`.
+* Created a new dedicated entity page `wiki/entities/Multi-Head Attention.md`.
+* Updated `wiki/entities/Transformers.md` and `wiki/entities/Self-Attention Mechanism.md` to cross-link to the new page.
+* Updated `wiki/index.md` to include the new entity.
+
+## [2026-05-12] Ingest | What is grouped query attention (GQA)
+* Used a Python HTML parser to manually extract the article from IBM since WebFetch was blocked. Saved to `raw/LLM/What is grouped query attention.md`.
+* Created `wiki/research/Grouped Query Attention Summary.md`.
+* Created entity pages for `wiki/entities/Grouped Query Attention.md` and `wiki/entities/Multi-Query Attention.md`.
+* Updated `wiki/entities/Multi-Head Attention.md` to link to these KV cache optimizations.
+* Updated `wiki/index.md`.
+## [2026-05-12] Enhancement | GQA Visualization
+* Added an ASCII visualization to `wiki/entities/Grouped Query Attention.md` comparing the structural routing of Q, K, and V heads between MHA, GQA, and MQA.
+## [2026-05-12] Maintenance | Fix YAML Array Parsing
+* Corrected an anomaly in the automated YAML fix script that resulted in doubly-wrapped brackets for some `related:` and `sources:` arrays.
+* Converted older list-based YAML source blocks in `wiki/entities/KV Cache.md`, `DOM State Compression.md`, `Web Agent.md`, and `wiki/research/Browser-Use Implementation.md` into proper quoted wikilink arrays for Obsidian Properties support.
+## [2026-05-12] Maintenance | Clean up straggler YAML properties
+* Found and corrected the remaining unformatted `sources:` list arrays in `wiki/research/Web Agent Architecture.md`, `wiki/research/Taxy.ai Implementation.md`, and `wiki/research/大模型位置编码-ALiBi位置编码 Summary.md`, ensuring every single file in the wiki conforms perfectly to Obsidian's quoted wikilink array format for properties.

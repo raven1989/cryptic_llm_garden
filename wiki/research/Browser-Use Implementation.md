@@ -7,8 +7,7 @@ tags:
 aliases:
   - Browser-Use
 date: 2026-04-09
-sources:
-  - raw/web_agent/browser-use/
+sources: ["[[raw/web_agent/browser-use/]]"]
 ---
 
 # Browser-Use Implementation Deep Dive

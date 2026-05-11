@@ -2,8 +2,8 @@
 tags: [study-plan, llm, algorithms, engineering, layer3]
 date: 2026-04-13
 aliases: [Layer 3 Syllabus, Architectures and Operators]
-related: [[My LLM Learning Sequence]], [[LLM Study Plan]]
-sources: [[raw/llm_study_plan/Outline_Layer3.md]]
+related: ["[[My LLM Learning Sequence]]", "[[LLM Study Plan]]"]
+sources: ["[[raw/llm_study_plan/Outline_Layer3.md]]"]
 ---
 
 # Layer 3: Architectures and Operators Syllabus

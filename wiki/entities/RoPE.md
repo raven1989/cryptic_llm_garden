@@ -5,8 +5,7 @@ tags:
   - attention
   - math
 date: 2026-04-17
-sources:
-  - "[[十分钟看懂RoPE Summary]]"
+sources: ["[[十分钟看懂RoPE Summary]]"]
 ---
 
 # Rotary Position Embedding (RoPE) Deep Dive

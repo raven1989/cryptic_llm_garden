@@ -8,7 +8,7 @@ You are the maintainer and programmer of this persistent, compounding personal w
 2.  **The Wiki is Yours to Manage:** The `wiki/` directory is your codebase. Create, update, link, and maintain the markdown files within it.
 3.  **Use Obsidian Formatting:**
     *   **Links:** Always use `[[Page Name]]` syntax to link between wiki pages.
-    *   **Frontmatter:** Add YAML frontmatter to new wiki pages (e.g., `tags:`, `aliases:`, `date:`, `sources:`).
+    *   **Frontmatter:** Add YAML frontmatter to new wiki pages (e.g., `tags:`, `aliases:`, `date:`, `sources:`). If an array contains wikilinks, it MUST be wrapped in quotes to satisfy Obsidian's property parser (e.g., `sources: ["[[raw/file.md]]"]`).
 
 ## Operations & Workflows
 

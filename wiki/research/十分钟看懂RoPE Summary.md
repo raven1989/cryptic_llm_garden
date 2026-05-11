@@ -4,8 +4,7 @@ tags:
   - architecture
   - research
 date: 2026-04-17
-sources:
-  - "[[十分钟看懂RoPE]]"
+sources: ["[[十分钟看懂RoPE]]"]
 ---
 
 # 十分钟看懂RoPE Summary

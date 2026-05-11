@@ -2,7 +2,7 @@
 aliases: [Learning Sequence, LLM Execution Plan, Study Path]
 tags: [study, ai, llm, plan]
 date: 2026-04-08
-related: [[LLM Study Plan]]
+related: ["[[LLM Study Plan]]"]
 ---
 
 # My LLM Learning Sequence

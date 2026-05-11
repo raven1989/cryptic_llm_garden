@@ -6,8 +6,7 @@ tags:
 aliases:
   - Taxy.ai
 date: 2026-04-09
-sources:
-  - raw/web_agent/taxyai/
+sources: ["[[raw/web_agent/taxyai/]]"]
 ---
 
 # Taxy.ai Implementation Deep Dive

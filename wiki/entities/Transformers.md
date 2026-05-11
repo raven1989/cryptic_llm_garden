@@ -27,7 +27,8 @@ The fundamental architecture behind most modern Large Language Models (LLMs). Th
 
 ## Micro-Designs & Optimizations
 
-*   **Multi-Query Attention (MQA):** Shares KV matrices across heads to reduce KV Cache size. Grouped-Query Attention (GQA), the current standard, groups heads to share KV matrices, offering a balance between speed and quality.
+*   **[[Multi-Head Attention]]:** Splits the attention mechanism into parallel representation subspaces to prevent attention thinning without increasing compute complexity.
+    *   *Optimization:* **Multi-Query Attention (MQA)** shares KV matrices across heads to reduce KV Cache size. Grouped-Query Attention (GQA), the current standard, groups heads to share KV matrices, offering a balance between speed and quality.
 *   **FlashAttention (v1/v2/v3):** An IO-aware optimization. Uses "Tiling" to compute Softmax and matrix multiplication entirely within the fast SRAM, avoiding slow HBM reads/writes.
 *   **[[Positional Encoding]]:** Techniques to inject sequence order. Includes Rotary Position Embedding (RoPE) which maps tokens to complex space and rotates them, and ALiBi which applies linear decay to attention scores.
 *   **Normalization:** RMSNorm replaces LayerNorm, skipping mean calculation for speed. Pre-Norm architecture places normalization before Attention/FFN to prevent deep gradient explosion.

@@ -1,7 +1,7 @@
 ---
 tags: [llm, study-plan, engineering, algorithms]
 date: 2026-04-08
-sources: [[raw/Outline.md]], [[raw/Outline_Layer1.md]], [[raw/Outline_Layer2.md]], [[raw/Outline_Layer3.md]]
+sources: ["[[raw/Outline.md]]", "[[raw/Outline_Layer1.md]]", "[[raw/Outline_Layer2.md]]", "[[raw/Outline_Layer3.md]]"]
 ---
 
 # LLM Full-Stack Algorithm Engineering Study Plan

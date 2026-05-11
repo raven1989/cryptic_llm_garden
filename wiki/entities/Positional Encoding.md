@@ -4,9 +4,7 @@ tags:
   - architecture
   - attention
 date: 2026-04-17
-sources:
-  - "[[Why is Attention divided by Root d_k]]"
-  - "[[You could have designed state of the art positional encoding]]"
+sources: ["[[Why is Attention divided by Root d_k]]", "[[You could have designed state of the art positional encoding]]"]
 ---
 
 # Positional Encoding

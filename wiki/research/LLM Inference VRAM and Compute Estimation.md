@@ -2,7 +2,7 @@
 tags: [inference, vram, flops, optimization, memory-bound, compute-bound]
 aliases: [Estimating LLM Inference VRAM and Compute]
 date: 2026-04-15
-sources: [raw/LLM/大模型推理显存和计算量估计方法.md]
+sources: ["[[raw/LLM/大模型推理显存和计算量估计方法.md]]"]
 ---
 
 # LLM Inference VRAM and Compute Estimation
