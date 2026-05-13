@@ -113,3 +113,26 @@ Ingested the raw source `raw/transformer/Why is Attention divided by √dₖ.md`
 * Converted older list-based YAML source blocks in `wiki/entities/KV Cache.md`, `DOM State Compression.md`, `Web Agent.md`, and `wiki/research/Browser-Use Implementation.md` into proper quoted wikilink arrays for Obsidian Properties support.
 ## [2026-05-12] Maintenance | Clean up straggler YAML properties
 * Found and corrected the remaining unformatted `sources:` list arrays in `wiki/research/Web Agent Architecture.md`, `wiki/research/Taxy.ai Implementation.md`, and `wiki/research/大模型位置编码-ALiBi位置编码 Summary.md`, ensuring every single file in the wiki conforms perfectly to Obsidian's quoted wikilink array format for properties.
+## [2026-05-12] Create | RMSNorm
+* Created a dedicated entity page `wiki/entities/RMSNorm.md` detailing Root Mean Square Normalization, its mathematical formulation, and its relationship with Pre-Norm architectures.
+* Updated `wiki/index.md` to link the new entity page.
+## [2026-05-12] Ingest | DeepSeek's Multi-Head Latent Attention
+* Ingested two source articles (`raw/LLM/Build DeepSeek-V3: Multi-Head Latent Attention (MLA) Architecture.md` and `raw/LLM/DeepSeek's Multi-Head Latent Attention.md`).
+* Created a dedicated entity page `wiki/entities/Multi-Head Latent Attention.md` detailing KV Cache Compression, decoupled RoPE, weight absorption, and the asymmetric design of positional vectors.
+* Updated `wiki/index.md` to link the new entity page.
+
+## [2026-05-12] Ingest | DeepSeek-V3.2 Architecture
+* Ingested the newly extracted markdown paper `raw/LLM/DeepSeek-V3.2- Pushing the Frontier of Open Large Language Models.md`.
+* Created a new entity page `wiki/entities/DeepSeek Sparse Attention.md` (DSA) to document the lightning indexer and fine-grained token selection mechanisms. Included the extracted diagram `wiki/media/dsa_architecture.jpeg`.
+* Updated `wiki/index.md` to link the new DSA entity page.
+
+## [2026-05-13] Synthesis | DeepSeek-V3.2 Training Pipeline
+* Created `wiki/research/DeepSeek-V3.2 Training Pipeline.md` summarizing the post-training innovations.
+* Documented the two-stage DSA continued pre-training process and included the specific KL-divergence loss functions.
+* Documented the GRPO scaling optimizations (Unbiased KL Estimate, Off-Policy Sequence Masking) including their exact mathematical formulations.
+* Documented the agentic tool-use integration, specifically the context management retention rules and the synthetic environment generation pipeline.
+* Updated `wiki/index.md` to link to the new research page.
+## [2026-05-13] Ingest | mHC: Manifold-Constrained Hyper-Connections
+- Read: `raw/LLM/mHC: Manifold-Constrained Hyper-Connections.md`
+- Created: `wiki/research/mHC Summary.md`
+- Updated: `wiki/index.md`
