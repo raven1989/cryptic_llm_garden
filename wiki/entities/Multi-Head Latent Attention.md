@@ -24,11 +24,14 @@ To understand the savings, let's define the dimensions:
 *   $d$: The total model hidden dimension ($d = H \times d_h$).
 *   $d_c$: The dimension of the compressed latent space.
 
-MLA bypasses the memory wall by introducing a low-rank bottleneck:
-1. **Compression (Down-projection):** Instead of calculating and storing separate Keys and Values for every head, the input $x$ is projected into a single, lower-dimensional latent vector $c^{KV}$ using a weight matrix $W^{DKV} \in \mathbb{R}^{d_c \times d}$. 
-2. **Caching the Latent Vector:** **Only $c^{KV}$ is cached.** Standard MHA requires caching vectors of size $2 \times d_h \times H$ per token per layer (Keys and Values for all heads). In MLA, the cache size drops to just $d_c$ per token. 
-    *   **Scope of sharing:** Critically, this single $c^{KV}$ latent vector is **shared across all $H$ attention heads** within that specific layer.
-3. **Decompression (Up-projection):** When Keys and Values are needed for the attention computation, the shared cached $c^{KV}$ is up-projected back to full multi-head sizes using two separate matrices: $W^{UK}$ (for Keys) and $W^{UV}$ (for Values).
+MLA bypasses the memory wall by introducing a low-rank bottleneck for keys and values:
+1. **Compression (Down-projection):** Instead of calculating and storing separate Keys and Values for every head, the hidden state $h_t$ (for the $t$-th token) is projected into a single, lower-dimensional latent vector $\mathbf{c}_t^{KV}$ using a down-projection weight matrix $W^{DKV} \in \mathbb{R}^{d_c \times d}$:
+   $$\mathbf{c}_t^{KV} = W^{DKV} h_t \quad \quad \text{(Equation 9)}$$
+2. **Caching the Latent Vector:** **Only $\mathbf{c}_t^{KV}$ is cached.** Standard MHA requires caching vectors of size $2 \times d_h \times H$ per token per layer (Keys and Values for all heads). In MLA, the cache size drops to just $d_c$ per token. 
+    *   **Scope of sharing:** Critically, this single $\mathbf{c}_t^{KV}$ latent vector is **shared across all $H$ attention heads** within that specific layer.
+3. **Decompression (Up-projection):** When Keys and Values are needed for the attention computation, the shared cached $\mathbf{c}_t^{KV}$ is up-projected back to full multi-head sizes using two separate matrices $W^{UK}, W^{UV} \in \mathbb{R}^{d_h H \times d_c}$:
+   $$\mathbf{k}_t^C = W^{UK} \mathbf{c}_t^{KV} \quad \quad \text{(Equation 10)}$$
+   $$\mathbf{v}_t^C = W^{UV} \mathbf{c}_t^{KV} \quad \quad \text{(Equation 11)}$$
 
 This provides a massive memory reduction. In DeepSeek-V3, $d_h=128$, $H=128$ (so standard cache is $2 \times 128 \times 128 = 32,768$ elements), but $d_c=512$. This results in a massive compression ratio of 64x, drastically increasing the number of concurrent users a GPU can serve.
 

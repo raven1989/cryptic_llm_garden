@@ -1,8 +1,9 @@
 ---
 tags: [llm, architecture, residual-connections, hyper-connections]
 aliases: [mHC, Manifold-Constrained Hyper-Connections]
-date: 2026-05-13
+date: 2026-05-18
 sources: ["[[raw/LLM/mHC: Manifold-Constrained Hyper-Connections.md]]"]
+related: ["[[Residual Connections]]"]
 ---
 
 # Manifold-Constrained Hyper-Connections (mHC)

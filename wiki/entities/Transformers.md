@@ -32,3 +32,4 @@ The fundamental architecture behind most modern Large Language Models (LLMs). Th
 *   **FlashAttention (v1/v2/v3):** An IO-aware optimization. Uses "Tiling" to compute Softmax and matrix multiplication entirely within the fast SRAM, avoiding slow HBM reads/writes.
 *   **[[Positional Encoding]]:** Techniques to inject sequence order. Includes Rotary Position Embedding (RoPE) which maps tokens to complex space and rotates them, and ALiBi which applies linear decay to attention scores.
 *   **Normalization:** RMSNorm replaces LayerNorm, skipping mean calculation for speed. Pre-Norm architecture places normalization before Attention/FFN to prevent deep gradient explosion.
+*   **[[Residual Connections]]:** Standard connections maintain the identity mapping. Advanced variants like [[mHC|Manifold-Constrained Hyper-Connections (mHC)]] widen the residual stream without adding FLOPs, using Sinkhorn-Knopp to ensure stability by projecting onto the Birkhoff polytope.

@@ -135,4 +135,18 @@ Ingested the raw source `raw/transformer/Why is Attention divided by √dₖ.md`
 ## [2026-05-13] Ingest | mHC: Manifold-Constrained Hyper-Connections
 - Read: `raw/LLM/mHC: Manifold-Constrained Hyper-Connections.md`
 - Created: `wiki/research/mHC Summary.md`
+
+## [2026-05-20] Ingest | Switch Transformer Architecture
+- Read: `raw/LLM/Switch Transformers - Scaling to Trillion Parameter Models with Simple and Efficient Sparsity.pdf`
+- Created: `wiki/entities/Switch Transformer.md` detailing Top-1 Switch Routing, the scale-invariant Differentiable Load Balancing Loss (multiplying by N), and the three stability techniques (Selective Precision, Expert Dropout, Initialization Scaling).
+- Added: Figure 2 architecture diagram to `wiki/media/switch_architecture.png`.
 - Updated: `wiki/index.md`
+## [2026-05-21] Ingest | ST-MoE: Designing Stable and Transferable Sparse Expert Models
+Ingested ST-MoE paper. Created `wiki/research/ST-MoE Summary.md` and `wiki/entities/Router Z-Loss.md`. Updated index.
+
+## [2026-05-21] Ingest | DeepSeek Shared Experts (DeepSeekMoE)
+Created `wiki/entities/DeepSeek Shared Experts.md` from DeepSeek-V2/V3 papers, including architecture diagram and math. Updated index.
+
+## [2026-05-21] Ingest | Multi-Head Latent Attention
+Added DeepSeek-V2 equations 9-11 covering low-rank key-value joint compression into `wiki/entities/Multi-Head Latent Attention.md`.
+

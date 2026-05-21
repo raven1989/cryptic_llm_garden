@@ -8,7 +8,7 @@ This is the content-oriented catalog of the wiki. The LLM updates this file when
 - [[Layer 3 - Architectures and Operators Syllabus]]: A deep-dive syllabus for Step 1 of the learning sequence, focusing on macro-architectures, micro-designs, and inference bottlenecks.
 
 ## Research & Topics
-- [[mHC Summary]]: A breakdown of Manifold-Constrained Hyper-Connections, detailing how unconstrained residual expansions lose the identity mapping property, and how mHC uses the Sinkhorn-Knopp algorithm to project matrices onto the Birkhoff polytope to restore stability.
+- [[ST-MoE Summary]]: A summary of the ST-MoE paper detailing how the Router Z-Loss prevents training instability in massive sparse models caused by bfloat16 exponential roundoff errors.
 - [[Grouped Query Attention Summary]]: A summary of the IBM article detailing how Grouped Query Attention and Multi-Query Attention optimize the standard MHA mechanism.
 - [[DeepSeek-V3.2 Training Pipeline]]: A comprehensive breakdown of DeepSeek-V3.2's training protocol, including DSA pre-training integration, GRPO scaling stability improvements (unbiased KL estimate, off-policy sequence masking), and agentic synthetic data generation.
 - [[大模型位置编码-ALiBi位置编码 Summary]]: A summary of Attention with Linear Biases (ALiBi), a positional encoding technique for improving length extrapolation in Large Language Models.
@@ -28,21 +28,28 @@ This is the content-oriented catalog of the wiki. The LLM updates this file when
 - [[Agents]]: Workflows, State Machines, multi-agent systems, and tool calling sandboxes.
 - [[ALiBi]]: Attention with Linear Biases, a positional encoding method that applies distance penalties directly to attention scores to enable length extrapolation.
 - [[Decoder-Only Models]]: Transformer architectures designed exclusively for auto-regressive text generation (e.g., GPT, LLaMA).
+- [[DeepSeek Shared Experts]]: An architectural innovation in DeepSeekMoE that isolates general knowledge into a set of permanently active experts, allowing the remaining routed experts to achieve fine-grained specialization.
 - [[DeepSeek Sparse Attention]]: DeepSeek-V3.2's sparse attention mechanism that uses a lightning indexer to select top-k tokens, reducing computational complexity for long contexts.
 - [[DOM State Compression]]: Techniques for stripping non-interactive elements from HTML to reduce token usage and improve privacy.
 - [[Encoder-Decoder Models]]: Transformer architectures designed for sequence-to-sequence tasks like translation and summarization (e.g., T5, BART).
 - [[Encoder-Only Models]]: Transformer architectures designed for understanding input text and generating contextual embeddings (e.g., BERT).
 - [[Fine-tuning]]: The training pipeline, from Pre-training to SFT and RLHF/DPO alignment, plus PEFT methods like LoRA.
 - [[Grouped Query Attention]]: An architectural optimization for MHA that partitions Query heads into groups to share Key/Value caches, maximizing efficiency and accuracy.
+- [[GShard]]: Google's 600B parameter MoE architecture that introduced Top-2 gating, proportional random dropping, and a differentiable auxiliary loss to successfully scale transformers across distributed TPUs.
 - [[KV Cache]]: The Key-Value cache optimization used during autoregressive generation to trade VRAM for compute speed.
+- [[mHC]]: Manifold-Constrained Hyper-Connections, a method for widening residual streams while maintaining stability by projecting matrices onto the Birkhoff polytope using the Sinkhorn-Knopp algorithm.
 - [[Multi-Head Attention]]: The structural enhancement that splits attention into parallel subspaces to prevent attention thinning without adding compute.
 - [[Multi-Head Latent Attention]]: DeepSeek's architectural innovation that drastically reduces KV Cache size by compressing Keys and Values into a single shared latent vector while decoupling RoPE to enable weight absorption.
 - [[Multi-Query Attention]]: An extreme optimization of MHA that shares a single Key and Value head across all Query heads to drastically reduce KV cache size.
 - [[Positional Encoding]]: Techniques (like Sinusoidal, RoPE, and ALiBi) used to inject sequence order information into Transformers, compensating for their lack of recurrence.
 - [[RAG]]: Advanced Retrieval-Augmented Generation architectures including dense/sparse retrieval, reranking, and Knowledge Graph extraction.
+- [[Residual Connections]]: Explains the identity mapping property and its variations, including mHC for widening the residual stream.
 - [[RMSNorm]]: Root Mean Square Normalization, a highly efficient variant of LayerNorm that skips mean-centering to speed up training and inference in modern LLMs.
 - [[RoPE]]: A mathematical deep dive into Rotary Position Embedding, including its block-diagonal multi-dimensional formulation, efficient Hadamard product computation, Long-Range Decay proof (Abel Transformation), and LLaMA PyTorch code snippets.
+- [[Router Z-Loss]]: An auxiliary loss function that stabilizes the training of massive MoE models by penalizing the squared Log-Sum-Exp of routing logits, preventing catastrophic exponential roundoff errors in bfloat16.
+- [[Sparsely-Gated MoE Layer]]: The seminal 2017 architecture that introduced conditional computation at scale via Noisy Top-K Gating and auxiliary load-balancing losses, forming the basis for modern MoE models.
 - [[Self-Attention Mechanism]]: The mathematical foundation of Transformers detailing why Query, Key, and Value matrices must use independent weights to prevent identity matrix degeneration.
+- [[Switch Transformer]]: Google's 2021 architecture that simplified MoEs using Top-1 Routing, introduced a scale-invariant load balancing loss, and utilized Selective Precision to train stable trillion-parameter models.
 - [[Transformers]]: Foundation model architectures, including MoE and SSM, along with micro-designs like FlashAttention and RoPE.
 - [[Vector Database]]: Storage and search mechanisms for embeddings using algorithms like HNSW and IVF-PQ.
 - [[Web Agent]]: Autonomous or semi-autonomous AI agents designed to navigate and manipulate web interfaces.
