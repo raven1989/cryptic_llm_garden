@@ -8,6 +8,8 @@ This is the content-oriented catalog of the wiki. The LLM updates this file when
 - [[Layer 3 - Architectures and Operators Syllabus]]: A deep-dive syllabus for Step 1 of the learning sequence, focusing on macro-architectures, micro-designs, and inference bottlenecks.
 
 ## Research & Topics
+- [[Mixture of Experts Summary]]: The ultimate, high-fidelity research guide charting the chronological evolution and critical trade-offs of Mixture of Experts (MoE) LLMs, linking seminal architectures from 2017 to DeepSeek-V3.
+- [[Speculative Decoding]]: An analysis of speculative decoding paradigms (classic draft-target, feature-extrapolating EAGLE-3, dynamic draft trees, and MTP) exploring memory-bandwidth bottlenecks and speculative sampling mathematical guarantees.
 - [[ST-MoE Summary]]: A summary of the ST-MoE paper detailing how the Router Z-Loss prevents training instability in massive sparse models caused by bfloat16 exponential roundoff errors.
 - [[Grouped Query Attention Summary]]: A summary of the IBM article detailing how Grouped Query Attention and Multi-Query Attention optimize the standard MHA mechanism.
 - [[DeepSeek-V3.2 Training Pipeline]]: A comprehensive breakdown of DeepSeek-V3.2's training protocol, including DSA pre-training integration, GRPO scaling stability improvements (unbiased KL estimate, off-policy sequence masking), and agentic synthetic data generation.
@@ -28,6 +30,7 @@ This is the content-oriented catalog of the wiki. The LLM updates this file when
 - [[Agents]]: Workflows, State Machines, multi-agent systems, and tool calling sandboxes.
 - [[ALiBi]]: Attention with Linear Biases, a positional encoding method that applies distance penalties directly to attention scores to enable length extrapolation.
 - [[Decoder-Only Models]]: Transformer architectures designed exclusively for auto-regressive text generation (e.g., GPT, LLaMA).
+- [[DeepSeek Load Balancing]]: The mathematical evolution of DeepSeek's MoE routing load-balancing strategies, covering V2's multi-faceted soft auxiliary losses ($L_{ExpBal}, L_{DevBal}, L_{CommBal}$) and V3's groundbreaking Auxiliary-Loss-Free dynamic bias routing.
 - [[DeepSeek Shared Experts]]: An architectural innovation in DeepSeekMoE that isolates general knowledge into a set of permanently active experts, allowing the remaining routed experts to achieve fine-grained specialization.
 - [[DeepSeek Sparse Attention]]: DeepSeek-V3.2's sparse attention mechanism that uses a lightning indexer to select top-k tokens, reducing computational complexity for long contexts.
 - [[DOM State Compression]]: Techniques for stripping non-interactive elements from HTML to reduce token usage and improve privacy.
@@ -40,6 +43,7 @@ This is the content-oriented catalog of the wiki. The LLM updates this file when
 - [[mHC]]: Manifold-Constrained Hyper-Connections, a method for widening residual streams while maintaining stability by projecting matrices onto the Birkhoff polytope using the Sinkhorn-Knopp algorithm.
 - [[Multi-Head Attention]]: The structural enhancement that splits attention into parallel subspaces to prevent attention thinning without adding compute.
 - [[Multi-Head Latent Attention]]: DeepSeek's architectural innovation that drastically reduces KV Cache size by compressing Keys and Values into a single shared latent vector while decoupling RoPE to enable weight absorption.
+- [[Multi-Token Prediction]]: DeepSeek's sequential multi-token prediction paradigm that enables zero-overhead, highly aligned self-speculative decoding with up to 1.8x throughput speedups.
 - [[Multi-Query Attention]]: An extreme optimization of MHA that shares a single Key and Value head across all Query heads to drastically reduce KV cache size.
 - [[Positional Encoding]]: Techniques (like Sinusoidal, RoPE, and ALiBi) used to inject sequence order information into Transformers, compensating for their lack of recurrence.
 - [[RAG]]: Advanced Retrieval-Augmented Generation architectures including dense/sparse retrieval, reranking, and Knowledge Graph extraction.

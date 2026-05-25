@@ -150,3 +150,28 @@ Created `wiki/entities/DeepSeek Shared Experts.md` from DeepSeek-V2/V3 papers, i
 ## [2026-05-21] Ingest | Multi-Head Latent Attention
 Added DeepSeek-V2 equations 9-11 covering low-rank key-value joint compression into `wiki/entities/Multi-Head Latent Attention.md`.
 
+## [2026-05-21] Ingest | DeepSeek Load Balancing
+Created `wiki/entities/DeepSeek Load Balancing.md` to capture the detailed hardware and statistical reasons for MoE load balancing, and mathematically compared DeepSeek-V2 auxiliary losses and DeepSeek-V3 Auxiliary-Loss-Free dynamic bias routing. Updated index.
+
+## [2026-05-21] Ingest | Mixture of Experts Summary
+Created the master compilation page `wiki/research/Mixture of Experts Summary.md` to review and cleanly connect all the dots, concepts, and papers in our MoE sub-wiki (from Shazeer 2017 up to DeepSeek-V3). Updated index.
+
+## [2026-05-21] Enhancement | MoE Chronological Evolution Timeline Diagram
+- Generated a high-fidelity vector diagram `wiki/media/moe_evolution_timeline.svg` representing the timeline of MoE milestones from 1991 to 2026 in the premium Claude Official style.
+- Updated the main `wiki/research/Mixture of Experts Summary.md` page to replace the outdated ASCII block diagram with the new professionally-designed vector diagram using direct SVG embedding (`![[wiki/media/moe_evolution_timeline.svg]]`) for native Obsidian rendering and high-scalability vector editing.
+
+
+## [2026-05-25] Ingest & Create | Multi-Token Prediction (MTP)
+- Read: `raw/LLM/DeepSeek-V3 Technical Report.pdf` Section 2.2 and relevant evaluation metrics.
+- Extracted: Figure 3 ("Illustration of our Multi-Token Prediction implementation") from page 10 of the PDF, cropped and formatted as `wiki/media/mtp_architecture.png`.
+- Created: `wiki/entities/Multi-Token Prediction.md` containing highly rigorous mathematical formulations, physical/hardware reasons for MTP performance, a detailed comparative architectural analysis (against Medusa, EAGLE, traditional speculative decoding), and the step-by-step speculative decoding causal mask execution traces.
+- Updated: `wiki/index.md` to index the new MTP entity page.
+
+## [2026-05-25] Synthesis & Create | Speculative Decoding
+- Read: `raw/LLM/Looking back at speculative decoding.md` and `raw/LLM/An Introduction to Speculative Decoding for Reducing Latency in AI Inference.md`.
+- Created: `wiki/research/Speculative Decoding.md` containing the fundamental explanation of the GPU memory bandwidth wall, the mathematical proof of Speculative Sampling (proving probability equivalence with zero quality degradation), and detailed comparative breakdowns of modern speculative paradigms (EAGLE-3, dynamic draft trees, and MTP).
+- Updated: `wiki/index.md` to index the new Speculative Decoding research page.
+
+
+
+
