@@ -13,66 +13,38 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "raw/LLM/Mixture of Experts Explained.md",
+                "file": "wiki/personal/Layer 3 - Architectures and Operators Syllabus.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Mixture of Experts Explained"
+              "title": "Layer 3 - Architectures and Operators Syllabus"
             }
           },
           {
-            "id": "af8253f28ff9a549",
+            "id": "828f6c129ed7ddef",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "raw/LLM/Mixture-of-Experts (MoE) LLMs.md",
+                "file": "wiki/research/Speculative Decoding.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Mixture-of-Experts (MoE) LLMs"
+              "title": "Speculative Decoding"
             }
           },
           {
-            "id": "b656ebc8af2aa2d3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "wiki/entities/Multi-Head Latent Attention.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Multi-Head Latent Attention"
-            }
-          },
-          {
-            "id": "59e24daec9545227",
+            "id": "54f297bf1b4dbb49",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "raw/LLM/DeepSeek-V3 Technical Report.pdf"
+                "file": "raw/stock/北大炒股课+2026-3-31+233422+1.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "DeepSeek-V3 Technical Report"
-            }
-          },
-          {
-            "id": "6129f2981f8e6e9a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "wiki/entities/Multi-Head Latent Attention.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Multi-Head Latent Attention"
+              "title": "北大炒股课+2026-3-31+233422+1"
             }
           }
         ],
@@ -238,14 +210,40 @@
       "bases:Create new base": false
     }
   },
-  "active": "b656ebc8af2aa2d3",
+  "active": "54f297bf1b4dbb49",
   "lastOpenFiles": [
-    "raw/LLM/DeepSeek-V2 - A Strong, Economical, and Efficient Mixture-of-Experts Language Model.pdf",
-    "wiki/entities/Multi-Head Latent Attention.md",
-    "wiki/entities/DeepSeek Shared Experts.md",
+    "wiki/research/Speculative Decoding.md",
+    "raw/stock/北大炒股课+2026-3-31+233422+1.pdf",
+    "raw/LLM/Looking back at speculative decoding.md",
+    "raw/stock/北大炒股课+2026-3-31+233422+1.ppt",
+    "raw/stock",
+    "tmp.md",
+    "wiki/entities/Multi-Token Prediction.md",
+    "raw/LLM/An Introduction to Speculative Decoding for Reducing Latency in AI Inference.md",
     "raw/LLM/DeepSeek-V3 Technical Report.pdf",
-    "wiki/media/deepseek_shared_experts.png",
+    "wiki/entities/Multi-Query Attention.md",
+    "wiki/media/截屏2026-05-25 16.27.14.png",
+    "wiki/media/mtp_architecture_large.png",
+    "wiki/media/temp_page-10.png",
+    "wiki/media/slice_bot.png",
+    "wiki/media/slice_mid.png",
+    "wiki/media/slice_top.png",
+    "wiki/personal/Layer 3 - Architectures and Operators Syllabus.md",
+    "wiki/media/mtp_architecture.png",
+    "wiki/media/temp_page-11.png",
+    "wiki/research/Multi-Token Prediction.md",
+    "wiki/entities/Sparsely-Gated MoE Layer.md",
+    "wiki/personal/My LLM Learning Sequence.md",
+    "wiki/personal/LLM Study Plan.md",
+    "wiki/research/Mixture of Experts Summary.md",
+    "wiki/media/moe_evolution_timeline.svg",
+    "wiki/media/moe_evolution_timeline.png",
+    "raw/LLM/DeepSeek-V2 - A Strong, Economical, and Efficient Mixture-of-Experts Language Model.pdf",
+    "generate_moe_diagram.py",
+    "wiki/entities/DeepSeek Shared Experts.md",
+    "wiki/entities/DeepSeek Load Balancing.md",
     "raw/LLM/Mixture of Experts Explained.md",
+    "wiki/entities/Multi-Head Latent Attention.md",
     "raw/LLM/Mixture-of-Experts (MoE) LLMs.md",
     "raw/LLM/DeepSeek-V3.2- Pushing the Frontier of Open Large Language Models.pdf",
     "raw/LLM/ST-MoE - Designing Stable and Transferable Sparse Expert Models.pdf",
@@ -254,36 +252,10 @@
     "llm-wiki.md",
     "wiki/entities/Switch Transformer.md",
     "raw/LLM/Switch Transformers - Scaling to Trillion Parameter Models with Simple and Efficient Sparsity.pdf",
-    "wiki/media/switch_architecture.png",
-    "wiki/media/switch_page5-05.png",
     "wiki/entities/GShard.md",
     "raw/LLM/GShard - Scaling Giant Models with Conditional Computation and Automatic Sharding.pdf",
     "raw/LLM/mHC: Manifold-Constrained Hyper-Connections.md",
     "wiki/entities/Grouped Query Attention.md",
-    "wiki/media/gshard_fig3-001.ppm",
-    "wiki/media/gshard_fig3-000.ppm",
-    "wiki/media/gshard_architecture.png",
-    "raw/LLM/OUTRAGEOUSLY LARGE NEURAL NETWORKS-THE SPARSELY-GATED MIXTURE-OF-EXPERTS LAYER.pdf",
-    "wiki/entities/Sparsely-Gated MoE Layer.md",
-    "wiki/media/moe_architecture.png",
-    "raw/LLM/大模型原理与架构/05_pretraining/README.md",
-    "raw/LLM/大模型原理与架构/05_pretraining/5.4_data_scaling.md",
-    "raw/LLM/大模型原理与架构/05_pretraining/5.3_encoder_decoder.md",
-    "raw/LLM/大模型原理与架构/05_pretraining/5.1_autoregressive.md",
-    "raw/LLM/大模型原理与架构/03_components/summary.md",
-    "raw/LLM/大模型原理与架构/03_components/README.md",
-    "raw/LLM/大模型原理与架构/03_components/3.7_full_architecture.md",
-    "wiki/personal/Layer 3 - Architectures and Operators Syllabus.md",
-    "wiki/personal/LLM Study Plan.md",
-    "wiki/entities/Residual Connections.md",
-    "wiki/research/mHC Summary.md",
-    "wiki/entities/mHC.md",
-    "wiki/personal/My LLM Learning Sequence.md",
-    "wiki/media/mhc_fig1.png",
-    "wiki/media/dsa_architecture.jpeg",
-    "raw/LLM/DeepSeek-V3.2- Pushing the Frontier of Open Large Language Models/_page_19_Figure_5.jpeg",
-    "raw/LLM/DeepSeek-V3.2- Pushing the Frontier of Open Large Language Models/_page_16_Figure_0.jpeg",
-    "raw/LLM/DeepSeek-V3.2- Pushing the Frontier of Open Large Language Models/_page_15_Figure_2.jpeg",
-    "raw/LLM/DeepSeek-V3.2- Pushing the Frontier of Open Large Language Models/DeepSeek-V3.2- Pushing the Frontier of Open Large Language Models_meta.json"
+    "raw/LLM/大模型原理与架构/05_pretraining/README.md"
   ]
 }
