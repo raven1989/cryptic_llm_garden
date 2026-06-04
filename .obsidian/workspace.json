@@ -11,44 +11,30 @@
             "id": "ccf21efed6d0456d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "wiki/personal/Layer 3 - Architectures and Operators Syllabus.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Layer 3 - Architectures and Operators Syllabus"
-            }
-          },
-          {
-            "id": "828f6c129ed7ddef",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "wiki/research/Speculative Decoding.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Speculative Decoding"
-            }
-          },
-          {
-            "id": "54f297bf1b4dbb49",
-            "type": "leaf",
-            "state": {
               "type": "pdf",
               "state": {
-                "file": "raw/stock/北大炒股课+2026-3-31+233422+1.pdf"
+                "file": "raw/Recommendation/OneRec-Unifying Retrieve and Rank with Generative Recommender and Preference Alignment.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "北大炒股课+2026-3-31+233422+1"
+              "title": "OneRec-Unifying Retrieve and Rank with Generative Recommender and Preference Alignment"
+            }
+          },
+          {
+            "id": "03d5cb1f5806eef6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "wiki/research/OneRec Summary.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "OneRec Summary"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -105,7 +91,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 343.5
+    "width": 256.5
   },
   "right": {
     "id": "d07ab2a7029888ec",
@@ -210,9 +196,23 @@
       "bases:Create new base": false
     }
   },
-  "active": "54f297bf1b4dbb49",
+  "active": "03d5cb1f5806eef6",
   "lastOpenFiles": [
+    "wiki/entities/OneRec.md",
+    "wiki/entities/Balanced K-means.md",
+    "raw/Recommendation/OneRec-Unifying Retrieve and Rank with Generative Recommender and Preference Alignment.pdf",
+    "wiki/research/OneRec Summary.md",
+    "wiki/media/onerec_overall_framework.png",
+    "wiki/entities/Beam Search.md",
+    "raw/Recommendation/深入理解 Beam Search.md",
+    "wiki/research/Beam Search Summary.md",
+    "raw/llm_study_plan/Outline_Layer3.md",
+    "raw/Recommendation/深入理解 Beam Search：原理, 示例与代码实现.md",
+    "wiki/personal/Layer 3 - Architectures and Operators Syllabus.md",
+    "raw/llm_study_plan/Outline.md",
     "wiki/research/Speculative Decoding.md",
+    "wiki/entities/Decoder-Only Models.md",
+    "raw/Recommendation",
     "raw/stock/北大炒股课+2026-3-31+233422+1.pdf",
     "raw/LLM/Looking back at speculative decoding.md",
     "raw/stock/北大炒股课+2026-3-31+233422+1.ppt",
@@ -228,7 +228,6 @@
     "wiki/media/slice_bot.png",
     "wiki/media/slice_mid.png",
     "wiki/media/slice_top.png",
-    "wiki/personal/Layer 3 - Architectures and Operators Syllabus.md",
     "wiki/media/mtp_architecture.png",
     "wiki/media/temp_page-11.png",
     "wiki/research/Multi-Token Prediction.md",
@@ -237,25 +236,12 @@
     "wiki/personal/LLM Study Plan.md",
     "wiki/research/Mixture of Experts Summary.md",
     "wiki/media/moe_evolution_timeline.svg",
-    "wiki/media/moe_evolution_timeline.png",
     "raw/LLM/DeepSeek-V2 - A Strong, Economical, and Efficient Mixture-of-Experts Language Model.pdf",
     "generate_moe_diagram.py",
     "wiki/entities/DeepSeek Shared Experts.md",
     "wiki/entities/DeepSeek Load Balancing.md",
     "raw/LLM/Mixture of Experts Explained.md",
-    "wiki/entities/Multi-Head Latent Attention.md",
-    "raw/LLM/Mixture-of-Experts (MoE) LLMs.md",
     "raw/LLM/DeepSeek-V3.2- Pushing the Frontier of Open Large Language Models.pdf",
-    "raw/LLM/ST-MoE - Designing Stable and Transferable Sparse Expert Models.pdf",
-    "wiki/entities/Router Z-Loss.md",
-    "wiki/research/ST-MoE Summary.md",
-    "llm-wiki.md",
-    "wiki/entities/Switch Transformer.md",
-    "raw/LLM/Switch Transformers - Scaling to Trillion Parameter Models with Simple and Efficient Sparsity.pdf",
-    "wiki/entities/GShard.md",
-    "raw/LLM/GShard - Scaling Giant Models with Conditional Computation and Automatic Sharding.pdf",
-    "raw/LLM/mHC: Manifold-Constrained Hyper-Connections.md",
-    "wiki/entities/Grouped Query Attention.md",
-    "raw/LLM/大模型原理与架构/05_pretraining/README.md"
+    "raw/LLM/ST-MoE - Designing Stable and Transferable Sparse Expert Models.pdf"
   ]
 }

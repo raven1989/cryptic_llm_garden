@@ -22,13 +22,18 @@ This is the content-oriented catalog of the wiki. The LLM updates this file when
 - [[Taxy.ai Implementation]]: Code-level analysis of how Taxy.ai extracts DOM state and executes hardware-level actions.
 - [[Browser-Use Implementation]]: Code-level analysis of how Browser-Use utilizes Pure Python CDP (Chrome DevTools Protocol) to execute stealthy web agents without JavaScript injection.
 - [[Action Execution - JS vs CDP]]: A detailed breakdown of why modern web agents must use the Chrome DevTools Protocol to simulate hardware interrupts rather than executing simple JavaScript.
+- [[Beam Search Summary]]: A comprehensive summary of Beam Search decoding mechanics, log-probability scoring, and early stopping behavior.
+- [[OneRec Summary]]: A comprehensive, unified generative recommender from Kuaishou Inc. replacing the traditional multi-stage retrieval and ranking cascade.
 
 ## Media Companion (Books, Movies, etc.)
 - (Empty)
 
 ## Entities & Concepts (Cross-cutting)
 - [[Agents]]: Workflows, State Machines, multi-agent systems, and tool calling sandboxes.
+- [[Balanced K-means]]: An optimized clustering algorithm with strict cluster-capacity constraints used to generate balanced semantic IDs.
+- [[OneRec]]: An end-to-end, single-stage generative recommendation architecture scaling up to 1B parameters with Sparse MoE.
 - [[ALiBi]]: Attention with Linear Biases, a positional encoding method that applies distance penalties directly to attention scores to enable length extrapolation.
+- [[Beam Search]]: A heuristic search decoding algorithm that balances the speed of greedy search with the optimality of exhaustive search by maintaining a fixed beam width of candidates.
 - [[Decoder-Only Models]]: Transformer architectures designed exclusively for auto-regressive text generation (e.g., GPT, LLaMA).
 - [[DeepSeek Load Balancing]]: The mathematical evolution of DeepSeek's MoE routing load-balancing strategies, covering V2's multi-faceted soft auxiliary losses ($L_{ExpBal}, L_{DevBal}, L_{CommBal}$) and V3's groundbreaking Auxiliary-Loss-Free dynamic bias routing.
 - [[DeepSeek Shared Experts]]: An architectural innovation in DeepSeekMoE that isolates general knowledge into a set of permanently active experts, allowing the remaining routed experts to achieve fine-grained specialization.

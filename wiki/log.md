@@ -175,3 +175,16 @@ Created the master compilation page `wiki/research/Mixture of Experts Summary.md
 
 
 
+
+## [2026-06-02] Ingest | 深入理解 Beam Search
+- Ingested the raw guide `raw/Recommendation/深入理解 Beam Search.md`.
+- Created a new summary page at `wiki/research/Beam Search Summary.md` detailing beam width, numerical underflow/log-likelihood, step-by-step decoding trace, and early stopping.
+- Created a new entity page at `wiki/entities/Beam Search.md` providing detailed mathematical scoring formulations, length normalization penalties, key parameter definitions, and standard production code implementation.
+- Updated `wiki/index.md` with links to both new pages.
+
+## [2026-06-05] Ingest | OneRec: Unifying Retrieve and Rank
+- Ingested: `raw/Recommendation/OneRec-Unifying Retrieve and Rank with Generative Recommender and Preference Alignment.pdf`.
+- Created: `wiki/research/OneRec Summary.md` containing a comprehensive summary of the Kuaishou paper with equations, algorithms, implementation details, and deployment architecture, referencing the framework diagram at `wiki/media/onerec_overall_framework.png`.
+- Created: `wiki/entities/Balanced K-means.md` detailing the mathematical formulations, cardinality constraints, distance distortion trade-offs, and hierarchical residual quantization flow.
+- Created: `wiki/entities/OneRec.md` detailing the unified encoder-decoder architecture, parameters scaling with Sparse MoE, and deployment specifications.
+- Updated: `wiki/index.md` to link and categorize all new pages under topics and concepts.
