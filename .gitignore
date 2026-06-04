@@ -1,0 +1,14 @@
+# Obsidian system files
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache/
+
+# Optional: Ignore third-party plugin/theme directories to keep the repo clean.
+# Obsidian will auto-reinstall them from the community-plugins.json list.
+.obsidian/plugins/
+.obsidian/themes/
+
+# Other standard ignores
+.DS_Store
+.claude/
+venv/
