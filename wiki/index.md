@@ -24,6 +24,7 @@ This is the content-oriented catalog of the wiki. The LLM updates this file when
 - [[Action Execution - JS vs CDP]]: A detailed breakdown of why modern web agents must use the Chrome DevTools Protocol to simulate hardware interrupts rather than executing simple JavaScript.
 - [[Beam Search Summary]]: A comprehensive summary of Beam Search decoding mechanics, log-probability scoring, and early stopping behavior.
 - [[OneRec Summary]]: A comprehensive, unified generative recommender from Kuaishou Inc. replacing the traditional multi-stage retrieval and ranking cascade.
+- [[OneRec-V2 Summary]]: Detailed breakdown of OneRec-V2's Lazy Decoder-Only architecture, context processor optimization, and scaling laws.
 
 ## Media Companion (Books, Movies, etc.)
 - (Empty)
@@ -32,6 +33,7 @@ This is the content-oriented catalog of the wiki. The LLM updates this file when
 - [[Agents]]: Workflows, State Machines, multi-agent systems, and tool calling sandboxes.
 - [[Balanced K-means]]: An optimized clustering algorithm with strict cluster-capacity constraints used to generate balanced semantic IDs.
 - [[OneRec]]: An end-to-end, single-stage generative recommendation architecture scaling up to 1B parameters with Sparse MoE.
+- [[OneRec-V2]]: Second-generation generative recommendation model from Kuaishou Inc., scaling up to 8B with projection-free KV generation and user feedback RL.
 - [[ALiBi]]: Attention with Linear Biases, a positional encoding method that applies distance penalties directly to attention scores to enable length extrapolation.
 - [[Beam Search]]: A heuristic search decoding algorithm that balances the speed of greedy search with the optimality of exhaustive search by maintaining a fixed beam width of candidates.
 - [[Decoder-Only Models]]: Transformer architectures designed exclusively for auto-regressive text generation (e.g., GPT, LLaMA).

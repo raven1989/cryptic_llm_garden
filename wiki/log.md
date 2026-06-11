@@ -188,3 +188,9 @@ Created the master compilation page `wiki/research/Mixture of Experts Summary.md
 - Created: `wiki/entities/Balanced K-means.md` detailing the mathematical formulations, cardinality constraints, distance distortion trade-offs, and hierarchical residual quantization flow.
 - Created: `wiki/entities/OneRec.md` detailing the unified encoder-decoder architecture, parameters scaling with Sparse MoE, and deployment specifications.
 - Updated: `wiki/index.md` to link and categorize all new pages under topics and concepts.
+
+## [2026-06-08] Ingest | OneRec-V2 Lazy Decoder-Only Architecture
+- Ingested: `raw/Recommendation/OneRec-V2 Technical Report.pdf` Section 1 and 2.
+- Created: `wiki/research/OneRec-V2 Summary.md` containing a comprehensive summary of the Lazy Decoder-Only architecture, including New Impression Only (NIO) organization, Context Processor, and empirical scaling laws.
+- Created: `wiki/entities/OneRec-V2.md` containing the technical specification comparisons (V1 vs. V2), projection-free KV generation details, and architectural formulas.
+- Updated: `wiki/index.md` to link and categorize these new pages under topics and concepts.
