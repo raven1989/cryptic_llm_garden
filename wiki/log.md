@@ -194,3 +194,7 @@ Created the master compilation page `wiki/research/Mixture of Experts Summary.md
 - Created: `wiki/research/OneRec-V2 Summary.md` containing a comprehensive summary of the Lazy Decoder-Only architecture, including New Impression Only (NIO) organization, Context Processor, and empirical scaling laws.
 - Created: `wiki/entities/OneRec-V2.md` containing the technical specification comparisons (V1 vs. V2), projection-free KV generation details, and architectural formulas.
 - Updated: `wiki/index.md` to link and categorize these new pages under topics and concepts.
+
+
+## [2026-06-22] Maintenance | VAE Notation Heads Up
+- Added a `[!WARNING]` callout to `[[wiki/entities/Variational Autoencoder.md]]` alerting readers that the notation letters for $p$ and $q$ are swapped relative to standard literature (using $p$ for encoder and $q$ for prior/decoder), while confirming mathematical internal consistency.
