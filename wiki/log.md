@@ -198,3 +198,14 @@ Created the master compilation page `wiki/research/Mixture of Experts Summary.md
 
 ## [2026-06-22] Maintenance | VAE Notation Heads Up
 - Added a `[!WARNING]` callout to `[[wiki/entities/Variational Autoencoder.md]]` alerting readers that the notation letters for $p$ and $q$ are swapped relative to standard literature (using $p$ for encoder and $q$ for prior/decoder), while confirming mathematical internal consistency.
+
+## [2026-06-30] Ingest | 一文详解 codebook 技术史 (From VAE to VQ/RQ-VAE)
+- Ingested raw source `raw/recommendation/一文详解codebook技术史.md`, along with direct analysis of `raw/Recommendation/Generating Diverse High-Fidelity Images with VQ-VAE-2.pdf` and `raw/Recommendation/Autoregressive Image Generation with Residual Quantization.pdf`.
+- Created detailed entity page `[[Variational Autoencoder]]` at `wiki/entities/Variational Autoencoder.md` providing geometric proofs of Jensen's inequality (concave version), KL divergence non-negativity ($KL \ge 0$), and a complete derivation of the closed-form Gaussian KL loss.
+- Created detailed entity page `[[VQ-VAE]]` at `wiki/entities/VQ-VAE.md` highlighting how deterministic one-hot posteriors and uniform priors reduce KL divergence to a constant ($\log K$), completely curing posterior collapse. Detail the Straight-Through Estimator (STE) and its PyTorch implementation.
+- Created detailed entity page `[[VQ-VAE-2]]` at `wiki/entities/VQ-VAE-2.md` explaining the multi-scale spatial hierarchy (Top/Bottom), detailing original Algorithms 1 and 2 in LaTeX, explaining gated PixelCNN prior conditioning, and discussing starting tokens and the connection to Diffusion models.
+- Created detailed entity page `[[RQ-VAE]]` at `wiki/entities/RQ-VAE.md` outlining how recursive residual quantization decomposes continuous features into coordinate tuples $(k_1, \dots, k_D)$ to scale latent capacity to $K^D$ without index collapse. Detail the two-transformer RQ-Transformer (Spatial/Depth), and explain how Soft-Labeling and Stochastic Sampling mitigate exposure bias.
+- Updated `wiki/index.md` with links and short descriptions for all four new entity pages.
+
+- Created detailed entity page `[[FSQ]]` at `wiki/entities/FSQ.md` providing mathematical derivations of the bounding derivative chain, the self-regularizing saturation limits, flat scalar base-conversion projections, and a production PyTorch module.
+- Created master compilation summary page `[[Codebook Technology History Summary]]` at `wiki/research/Codebook Technology History Summary.md` linking and comparing the entire evolutionary lineage (VAE, VQ-VAE, VQ-VAE-2, RQ-VAE, FSQ) with an elegant Mermaid flowchart, technical feature tables, and core math summaries.

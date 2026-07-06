@@ -25,6 +25,7 @@ This is the content-oriented catalog of the wiki. The LLM updates this file when
 - [[Beam Search Summary]]: A comprehensive summary of Beam Search decoding mechanics, log-probability scoring, and early stopping behavior.
 - [[OneRec Summary]]: A comprehensive, unified generative recommender from Kuaishou Inc. replacing the traditional multi-stage retrieval and ranking cascade.
 - [[OneRec-V2 Summary]]: Detailed breakdown of OneRec-V2's Lazy Decoder-Only architecture, context processor optimization, and scaling laws.
+- [[Codebook Technology History Summary]]: The master, high-fidelity research guide charting the chronological evolution and critical trade-offs of codebook discrete representation learning, from continuous VAE to FSQ.
 
 ## Media Companion (Books, Movies, etc.)
 - (Empty)
@@ -63,4 +64,9 @@ This is the content-oriented catalog of the wiki. The LLM updates this file when
 - [[Switch Transformer]]: Google's 2021 architecture that simplified MoEs using Top-1 Routing, introduced a scale-invariant load balancing loss, and utilized Selective Precision to train stable trillion-parameter models.
 - [[Transformers]]: Foundation model architectures, including MoE and SSM, along with micro-designs like FlashAttention and RoPE.
 - [[Vector Database]]: Storage and search mechanisms for embeddings using algorithms like HNSW and IVF-PQ.
+- [[Variational Autoencoder]]: The continuous, probabilistic generative autoencoder mapping features to Gaussian distributions using KL divergence and ELBO maximization.
+- [[VQ-VAE]]: Vector Quantized VAE, replacing continuous features with discrete codebook tokens using STE to prevent posterior collapse.
+- [[VQ-VAE-2]]: Second-generation hierarchical multi-scale VQ-VAE separating global shape (using self-attention) from local details.
+- [[FSQ]]: Finite Scalar Quantization, a highly simplified, codebook-free alternative to VQ that replaces vector quantization with bounded rounding, completely eliminating auxiliary losses and index collapse.
+- [[RQ-VAE]]: Residual Quantized VAE recursively decomposing continuous vectors into multi-scale residual stacks to compress spatial dimensions without codebook collapse.
 - [[Web Agent]]: Autonomous or semi-autonomous AI agents designed to navigate and manipulate web interfaces.
