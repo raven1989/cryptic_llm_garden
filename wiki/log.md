@@ -209,3 +209,18 @@ Created the master compilation page `wiki/research/Mixture of Experts Summary.md
 
 - Created detailed entity page `[[FSQ]]` at `wiki/entities/FSQ.md` providing mathematical derivations of the bounding derivative chain, the self-regularizing saturation limits, flat scalar base-conversion projections, and a production PyTorch module.
 - Created master compilation summary page `[[Codebook Technology History Summary]]` at `wiki/research/Codebook Technology History Summary.md` linking and comparing the entire evolutionary lineage (VAE, VQ-VAE, VQ-VAE-2, RQ-VAE, FSQ) with an elegant Mermaid flowchart, technical feature tables, and core math summaries.
+## [2026-07-06] Ingest | Meta GRs : 万亿参数级别的生成式推荐
+- Ingested paper summary on Meta's generative recommendation framework in `wiki/research/Meta GRs Summary.md`.
+- Created entity page for the custom sequence transduction encoder `wiki/entities/HSTU.md`.
+- Updated central catalog in `wiki/index.md`.
+
+## [2026-07-06] Consolidate | Merged Meta GR Summary into HSTU
+- Merged the entire content of `wiki/research/Meta GRs Summary.md` into `wiki/entities/HSTU.md` to prevent duplicate structures and centralize HSTU/Meta GRs research.
+- Deleted obsolete summary file `wiki/research/Meta GRs Summary.md`.
+- Updated central index in `wiki/index.md` to point researchers directly to the unified `[[HSTU]]` file.
+
+## [2026-07-07] Refactor | Enhanced HSTU Unified Documentation
+- Structured the entire backbone layers breakdown under the title "### HSTU Encoder Block Layers".
+- Resized the physical ASCII paradigm diagram to respect a strict maximum display width of 78 characters.
+- Extracted and cropped Page 4's Figure 3 structure visual into `wiki/media/HSTU-fig3_architecture.png` and embedded it natively.
+- Cleaned up duplicate index pointers to ensure a pristine and non-fragmented entry state in `wiki/index.md`.
