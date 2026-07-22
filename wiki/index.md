@@ -8,6 +8,8 @@ This is the content-oriented catalog of the wiki. The LLM updates this file when
 - [[Layer 3 - Architectures and Operators Syllabus]]: A deep-dive syllabus for Step 1 of the learning sequence, focusing on macro-architectures, micro-designs, and inference bottlenecks.
 
 ## Research & Topics
+- [[RankMixer Summary]]: ByteDance's RankMixer architecture boosting ranking model MFU from 4.5% to 45% and scaling parameters to 1B under strict SLA constraints.
+- [[Douyin STCA Summary]]: ByteDance's E2E long-sequence recommendation system scaling behavior sequences to 10k+ under strict latency and training budgets using stacked target cross-attention and Request Level Batching.
 - [[HSTU]]: Meta's complete Generative Recommenders summary, sequential transduction task formulation (Table 1), target-masking details, and the custom HSTU encoder architecture.
 - [[Mixture of Experts Summary]]: The ultimate, high-fidelity research guide charting the chronological evolution and critical trade-offs of Mixture of Experts (MoE) LLMs, linking seminal architectures from 2017 to DeepSeek-V3.
 - [[Speculative Decoding]]: An analysis of speculative decoding paradigms (classic draft-target, feature-extrapolating EAGLE-3, dynamic draft trees, and MTP) exploring memory-bandwidth bottlenecks and speculative sampling mathematical guarantees.
@@ -32,6 +34,10 @@ This is the content-oriented catalog of the wiki. The LLM updates this file when
 - (Empty)
 
 ## Entities & Concepts (Cross-cutting)
+- [[Model Flops Utilization]]: A hardware-efficiency metric measuring actual vs. theoretical peak FLOPs, crucial for scaling recommendations.
+- [[RankMixer]]: A compute-bound, GPU-friendly ranking network architecture from ByteDance featuring Per-Token FFNs and ReLU-MoE routing.
+- [[STCA]]: A linear-time target-to-history cross-attention mechanism with associative query-side algebraic optimization to bypass Key/Value HBM bottlenecks.
+- [[Request Level Batching]]: A user-centric, request-wise sample batching layout that amortizes user history sequence transfer and encoding across target candidates.
 - [[Agents]]: Workflows, State Machines, multi-agent systems, and tool calling sandboxes.
 - [[Balanced K-means]]: An optimized clustering algorithm with strict cluster-capacity constraints used to generate balanced semantic IDs.
 - [[OneRec]]: An end-to-end, single-stage generative recommendation architecture scaling up to 1B parameters with Sparse MoE.

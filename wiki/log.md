@@ -224,3 +224,25 @@ Created the master compilation page `wiki/research/Mixture of Experts Summary.md
 - Resized the physical ASCII paradigm diagram to respect a strict maximum display width of 78 characters.
 - Extracted and cropped Page 4's Figure 3 structure visual into `wiki/media/HSTU-fig3_architecture.png` and embedded it natively.
 - Cleaned up duplicate index pointers to ensure a pristine and non-fragmented entry state in `wiki/index.md`.
+
+## [2026-07-08] Ingest | ByteDance RankMixer Architecture (Part 1)
+- Started in-depth analysis of `raw/Recommendation/RankMixer.pdf`.
+- Created structured summary page `wiki/research/RankMixer Summary.md` with absolute media embedding of `/Users/louie/AppleRepo/cryptic_llm_garden/wiki/media/architecture_RankMixer_block.png`.
+- Analyzed and documented low MFU bottlenecks, overall pipeline formulation, and tokenization layer mechanics (Group-and-split, linear projections, and heterogeneous continuous/sequential feature preprocessing).
+- Updated central index page `wiki/index.md`.
+
+## [2026-07-08] Ingest | ByteDance RankMixer Complete Methodology
+- Completed analysis and final documentation of `raw/Recommendation/RankMixer.pdf`.
+- Added **Section 4: Multi-Head Token Mixing** detailing splitting, transposition, recombination, and why setting $H = T$ is mathematically required for residual dimension alignment.
+- Added **Section 5: Per-Token FFN (PFFN)** explaining parameter isolation and why it prevents inter-feature-space domination.
+- Added **Section 6: Sparse MoE** outlining the mechanics of **ReLU Routing** (gating, $L_1$ penalty) and **Dense-Training/Sparse-Inference (DTSI-MoE)** to prevent expert under-training.
+- Added **Section 7: Scaling Laws** mathematical formulations.
+- Generated and registered cross-cutting entities: `[[RankMixer]]` and `[[Model Flops Utilization]]` under the core catalog.
+
+
+
+## [2026-07-10] Ingest | ByteDance Douyin STCA Architecture
+- Ingested the raw document `raw/Recommendation/字节抖音STCA-万级长序列End2End建模.md` and downloaded the complete arXiv paper `STCA_paper.pdf`.
+- Created structured summary page `wiki/research/Douyin STCA Summary.md` with complete technical breakdown of Stacked Target-to-History Cross Attention (STCA), Single-Query Optimization, Request Level Batching (RLB), and Length Extrapolation (Train Sparsely, Infer Densely).
+- Created reusable concept/entity pages: `[[STCA]]` and `[[Request Level Batching]]` under the core catalog.
+- Updated central index page `wiki/index.md` with the new entries.
