@@ -246,3 +246,41 @@ Created the master compilation page `wiki/research/Mixture of Experts Summary.md
 - Created structured summary page `wiki/research/Douyin STCA Summary.md` with complete technical breakdown of Stacked Target-to-History Cross Attention (STCA), Single-Query Optimization, Request Level Batching (RLB), and Length Extrapolation (Train Sparsely, Infer Densely).
 - Created reusable concept/entity pages: `[[STCA]]` and `[[Request Level Batching]]` under the core catalog.
 - Updated central index page `wiki/index.md` with the new entries.
+
+## [2026-07-22] Ingest | From Values to Tokens: An LLM-Driven Framework for Context-Aware Time Series Forecasting via Symbolic Discretization
+- Ingested paper summary on the TokenCast framework for context-aware time series forecasting in .
+- Created structured entity page  detailing decoupled RIN, causal vector quantization, codebook diversity loss, and vocabulary-level semantic alignment.
+- Created reusable concept/entity page  charting the evolution of time-series discretization from SAX to vector quantization, and detailing its mathematical foundations and advantages.
+- Updated central index page  with links and short descriptions for the new pages.
+
+
+## [2026-07-22] Ingest | From Values to Tokens: An LLM-Driven Framework for Context-Aware Time Series Forecasting via Symbolic Discretization
+- Ingested paper summary on the TokenCast framework for context-aware time series forecasting in `wiki/research/From Values to Tokens Summary.md`.
+- Created structured entity page `wiki/entities/TokenCast.md` detailing decoupled RIN, causal vector quantization, codebook diversity loss, and vocabulary-level semantic alignment.
+- Created reusable concept/entity page `wiki/entities/Symbolic Discretization.md` charting the evolution of time-series discretization from SAX to vector quantization, and detailing its mathematical foundations and advantages.
+- Updated central index page `wiki/index.md` with links and short descriptions for the new pages.
+
+
+## [2026-07-22] Refactor | Enhanced TokenCast Summary & Entity Pages
+- Revised `wiki/research/From Values to Tokens Summary.md` to incorporate deep-dive discussions on Section 1 (multimodal context-aware TSF motivations) and Section 3 (including concatenated causal processing, de-tokenizer offline targets, and the nature of $S$ special tokens).
+- Embedded the native architecture visualization `wiki/media/overview_context-aware_time_series_forecasting.png` inside the summary and entity files.
+- Revised the entity page `wiki/entities/TokenCast.md` and concept page `wiki/entities/Symbolic Discretization.md` to document the exact operational dimensionality, parameter details, and on-the-fly inference characteristics of temporal-length ($L$) based Reversible Instance Normalization (RevIN/RIN) compared to Batch Normalization.
+
+## [2026-07-23] Ingest | COMET: Codebook-based Online-adaptive Multi-scale Embedding for Time-series Anomaly Detection
+- Ingested the raw document `raw/time_series_forecast/COMET.md`.
+- Created structured summary page `wiki/research/COMET Summary.md` detailing Multi-scale Patch Encoding, Vector-Quantized Coreset, Local Scaling Distance scoring, Deviation-based Variable Selection, and Online Codebook Adaptation.
+- Integrated the overall architecture visualization `wiki/media/Overall_architecture_of_COMET.png` inside the summary.
+- Created reusable concept/entity page `wiki/entities/COMET.md` with detailed explanations of its five core architectural pillars.
+- Updated central index page `wiki/index.md` with links and short descriptions for both pages.
+
+## [2026-07-23] Ingest | Chronos-2 & CITRAS: In-Context Learning and Future Covariates in Decoder-Only Forecasting
+- Ingested raw documents `raw/time_series_forecast/Chronos-2.md` and `raw/time_series_forecast/CITRAS.md`.
+- Created structured summary page `wiki/research/Chronos-2 Summary.md` detailing robust scaling ($\sinh^{-1}$ transform), alternating Time/Group attention mechanisms, and the direct 21-quantile regression head. Integrated `wiki/media/chronos-2_pipeline.png` inside the summary.
+- Created structured summary page `wiki/research/CITRAS Summary.md` detailing the 2D alternating attention blocks, the Key-Value (KV) Shift mechanism for lag-less future covariate alignment, and Attention Score Smoothing (EMA) for global variate-level dependency stabilization. Integrated `wiki/media/Overall_structure_of_CITRAS.png` inside the summary.
+- Created comprehensive synthesis/topic page `wiki/research/In-Context Learning and Future Covariates in Decoder-Only Forecasting.md` comparing and categorizing covariate-informed decoder architectures, including TimesFM 2.5's `XReg` decoupled linear-residual modes (`xreg + timesfm` vs. `timesfm + xreg`).
+- Created reusable concept/entity pages:
+  - `wiki/entities/Group Attention.md` documenting task-group isolation and permutation-invariant spatial aggregation.
+  - `wiki/entities/KV Shift.md` documenting temporal-spatial decoupled query-key aligned attention.
+  - `wiki/entities/Attention Score Smoothing.md` documenting temporal EMA smoothing over inter-variable attention scores.
+  - `wiki/entities/TimesFM XReg Modes.md` documenting the mathematical and architectural pipeline of TimesFM 2.5's decoupled residual and error correction models.
+- Updated central index page `wiki/index.md` with links and short descriptions for all new pages.
