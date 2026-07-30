@@ -84,6 +84,7 @@ This is the content-oriented catalog of the wiki. The LLM updates this file when
 - [[Self-Attention Mechanism]]: The mathematical foundation of Transformers detailing why Query, Key, and Value matrices must use independent weights to prevent identity matrix degeneration.
 - [[Sparsely-Gated MoE Layer]]: The seminal 2017 architecture that introduced conditional computation at scale via Noisy Top-K Gating and auxiliary load-balancing losses, forming the basis for modern MoE models.
 - [[STCA]]: A linear-time target-to-history cross-attention mechanism with associative query-side algebraic optimization to bypass Key/Value HBM bottlenecks.
+- [[SwiGLU FFN]]: A gated activation variant of the feed-forward network using three projection matrices and a SiLU/Swish gate, forming the standard FFN component of modern LLMs.
 - [[Switch Transformer]]: Google's 2021 architecture that simplified MoEs using Top-1 Routing, introduced a scale-invariant load balancing loss, and utilized Selective Precision to train stable trillion-parameter models.
 - [[Symbolic Discretization]]: The process of mapping continuous time-series numerical sequences into discrete symbolic tokens to bridge the gap with language-based models.
 - [[TokenCast]]: An LLM-driven context-aware time series forecasting framework using decoupled reversible instance normalization and vocabulary-level symbolic discretization.

@@ -284,3 +284,8 @@ Created the master compilation page `wiki/research/Mixture of Experts Summary.md
   - `wiki/entities/Attention Score Smoothing.md` documenting temporal EMA smoothing over inter-variable attention scores.
   - `wiki/entities/TimesFM XReg Modes.md` documenting the mathematical and architectural pipeline of TimesFM 2.5's decoupled residual and error correction models.
 - Updated central index page `wiki/index.md` with links and short descriptions for all new pages.
+
+## [2026-07-29] Ingest | SwiGLU FFN: Feed-Forward Network and Activation Evolution
+- Created a dedicated, high-fidelity concept page `wiki/entities/SwiGLU FFN.md` detailing the role of the FFN as a "Memory Layer", the mathematical evolution from ReLU/GELU to SwiGLU, parameter dimension alignment (scaling intermediate dimension to 8/3 d), and PyTorch implementation.
+- Ingested raw insights on FFN mechanisms from `raw/LLM/大模型原理与架构/03_components/3.4_feedforward.md` and Llama innovations from `raw/LLM/大模型原理与架构/13_decoder_models/13.2_llama.md`.
+- Updated central index page `wiki/index.md` to link and describe the new entity.
