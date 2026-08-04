@@ -14,6 +14,7 @@ This is the content-oriented catalog of the wiki. The LLM updates this file when
 - [[In-Context Learning and Future Covariates in Decoder-Only Forecasting]]: Technical synthesis comparing the covariate-integration strategies of Chronos-2, CITRAS, and TimesFM 2.5 (XReg) under autoregressive constraints.
 
 - [[RankMixer Summary]]: ByteDance's RankMixer architecture boosting ranking model MFU from 4.5% to 45% and scaling parameters to 1B under strict SLA constraints.
+- [[Graphormer Summary]]: Microsoft's landmark Graphormer architecture injecting graph topology directly into attention via Centrality, Spatial, and Edge encodings.
 - [[Douyin STCA Summary]]: ByteDance's E2E long-sequence recommendation system scaling behavior sequences to 10k+ under strict latency and training budgets using stacked target cross-attention and Request Level Batching.
 - [[HSTU]]: Meta's complete Generative Recommenders summary, sequential transduction task formulation (Table 1), target-masking details, and the custom HSTU encoder architecture.
 - [[Mixture of Experts Summary]]: The ultimate, high-fidelity research guide charting the chronological evolution and critical trade-offs of Mixture of Experts (MoE) LLMs, linking seminal architectures from 2017 to DeepSeek-V3.
@@ -62,6 +63,7 @@ This is the content-oriented catalog of the wiki. The LLM updates this file when
 - [[Fine-tuning]]: The training pipeline, from Pre-training to SFT and RLHF/DPO alignment, plus PEFT methods like LoRA.
 - [[FSQ]]: Finite Scalar Quantization, a highly simplified, codebook-free alternative to VQ that replaces vector quantization with bounded rounding, completely eliminating auxiliary losses and index collapse.
 - [[Grouped Query Attention]]: An architectural optimization for MHA that partitions Query heads into groups to share Key/Value caches, maximizing efficiency and accuracy.
+- [[Graphormer]]: A graph-configured Transformer architecture incorporating centrality, topological distance (SPD), and edge features directly into the self-attention logits.
 - [[GShard]]: Google's 600B parameter MoE architecture that introduced Top-2 gating, proportional random dropping, and a differentiable auxiliary loss to successfully scale transformers across distributed TPUs.
 - [[KV Cache]]: The Key-Value cache optimization used during autoregressive generation to trade VRAM for compute speed.
 - [[mHC]]: Manifold-Constrained Hyper-Connections, a method for widening residual streams while maintaining stability by projecting matrices onto the Birkhoff polytope using the Sinkhorn-Knopp algorithm.
