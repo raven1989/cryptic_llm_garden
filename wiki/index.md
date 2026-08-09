@@ -9,6 +9,7 @@ This is the content-oriented catalog of the wiki. The LLM updates this file when
 - [[Layer 3 - Architectures and Operators Syllabus]]: A deep-dive syllabus for Step 1 of the learning sequence, focusing on macro-architectures, micro-designs, and inference bottlenecks.
 
 ## Research & Topics
+- [[A-LLMRec Summary]]: KAIST and NAVER's training-free framework aligning frozen sequential collaborative recommenders with frozen LLMs for warm and cold scenarios.
 - [[Chronos-2 Summary]]: Amazon AWS zero-shot time series foundation model shifting to an encoder-only architecture with continuous 21-quantile regression and Group Attention.
 - [[CITRAS Summary]]: Hitachi decoder-only transformer with 2D alternating temporal-spatial attention, KV Shift, and Attention Score Smoothing.
 - [[In-Context Learning and Future Covariates in Decoder-Only Forecasting]]: Technical synthesis comparing the covariate-integration strategies of Chronos-2, CITRAS, and TimesFM 2.5 (XReg) under autoregressive constraints.
@@ -35,14 +36,24 @@ This is the content-oriented catalog of the wiki. The LLM updates this file when
 - [[OneRec Summary]]: A comprehensive, unified generative recommender from Kuaishou Inc. replacing the traditional multi-stage retrieval and ranking cascade.
 - [[OneRec-V2 Summary]]: Detailed breakdown of OneRec-V2's Lazy Decoder-Only architecture, context processor optimization, and scaling laws.
 - [[Codebook Technology History Summary]]: The master, high-fidelity research guide charting the chronological evolution and critical trade-offs of codebook discrete representation learning, from continuous VAE to FSQ.
+- [[Conversational Recommender Systems]]: Synthesis of the architectural evolution, core trade-offs, and taxonomic paradigms of LLM-based Conversational Recommender Systems (CoLLM, LLaRA, CRAG, MCCRS, GCRS).
 - [[From Values to Tokens Summary]]: An LLM-driven framework using language-based symbolic representation as a unified intermediary for context-aware time series forecasting.
 - [[COMET Summary]]: SOTA codebook-based online-adaptive multi-scale embedding framework for multivariate time-series anomaly detection.
+- [[CoLLM Summary]]: University of Science and Technology of China and Meta AI's innovative approach explicitly integrating low-rank collaborative embeddings into Large Language Models.
+- [[CRAG Summary]]: University of Virginia, Cornell, and Netflix's landmark framework combining state-of-the-art LLMs with Collaborative Filtering for conversational recommendations.
+- [[CTRL Summary]]: Huawei Noah's Ark Lab's model-agnostic, two-stage framework distilling semantic and world knowledge from Pre-trained Language Models into lightweight collaborative models.
+- [[GCRS Summary]]: Nanyang Technological University's fully generative Conversational Recommender System integrating semantic IDs and structured next-token generation.
+- [[LC-Rec Summary]]: Renmin University's generative recommendation model using RQ-VAE index codes, Sinkhorn-Knopp collision resolution, and multi-task alignment-tuning.
+- [[LLaRA Summary]]: USTC and PolyU's Large Language-Recommendation Assistant utilizing hybrid prompting and progressive curriculum prompt tuning for sequential recommendation.
+- [[MCCRS Summary]]: UESTC, Tongji, and SWUFE's Multi-Type Context-Aware Conversational Recommender System using Mixture-of-Experts.
+- [[SeqLLM Summary]]: WeChat Pay and SJTU's framework injecting long behavioral-sequence modeling into LLMs for high-stakes merchant risk control and SOTA recommendation.
 
 ## Media Companion (Books, Movies, etc.)
 
 - (Empty)
 
 ## Entities & Concepts (Cross-cutting)
+- [[A-LLMRec]]: All-round LLM-based Recommender, a framework aligning pre-trained collaborative user/item embeddings with frozen LLMs using dual-stage projection MLPs.
 - [[Attention Score Smoothing]]: An attention regularization technique applying EMA across temporal steps to stabilize cross-variate dependencies and filter high-frequency noise.
 - [[Group Attention]]: A masked self-attention pooling mechanism that dynamically isolates token aggregation within designated task groups.
 - [[KV Shift]]: A step-wise cross-variate attention design that aligns Query and Key at step $i$ but shifts the known covariate Value to step $i+1$ to retrieve future context without data leakage.
@@ -53,11 +64,19 @@ This is the content-oriented catalog of the wiki. The LLM updates this file when
 - [[Balanced K-means]]: An optimized clustering algorithm with strict cluster-capacity constraints used to generate balanced semantic IDs.
 - [[Beam Search]]: A heuristic search decoding algorithm that balances the speed of greedy search with the optimality of exhaustive search by maintaining a fixed beam width of candidates.
 - [[COMET]]: Codebook-based online-adaptive multi-scale embedding combining dual-path patching, vector-quantized coreset, local scaling distance, and test-time adaptation.
+- [[CoLLM]]: Collaborative Large Language Model, a framework aligning low-rank traditional collaborative embeddings with LLM token embedding space.
+- [[CRAG]]: Collaborative Retrieval Augmented Generation, a pipeline bridging dialogue context and behavioral user-item interaction data using LLMs.
+- [[CTRL]]: Connect Collaborative and Language Model, a multi-modal CTR prediction framework aligning tabular features with textual semantic features using dual-encoders.
+- [[GCRS]]: Generative Conversational Recommender System, a unified next-token prediction framework representing items as discrete RQ-VAE coordinates.
+- [[LC-Rec]]: Language-Collaborative Recommender, a generative recommendation framework utilizing Sinkhorn-Knopp optimal transport constraints and multi-task alignment.
+- [[LLaRA]]: Large Language-Recommendation Assistant, an aligned multi-modal sequential recommendation framework using an MLP projector (SR2LLM).
+- [[MCCRS]]: Multi-Type Context-Aware Conversational Recommender System, a modular MoE-based architecture managed by a ChairBot.
 - [[Decoder-Only Models]]: Transformer architectures designed exclusively for auto-regressive text generation (e.g., GPT, LLaMA).
 - [[DeepSeek Load Balancing]]: The mathematical evolution of DeepSeek's MoE routing load-balancing strategies, covering V2's multi-faceted soft auxiliary losses ($L_{ExpBal}, L_{DevBal}, L_{CommBal}$) and V3's groundbreaking Auxiliary-Loss-Free dynamic bias routing.
 - [[DeepSeek Shared Experts]]: An architectural innovation in DeepSeekMoE that isolates general knowledge into a set of permanently active experts, allowing the remaining routed experts to achieve fine-grained specialization.
 - [[DeepSeek Sparse Attention]]: DeepSeek-V3.2's sparse attention mechanism that uses a lightning indexer to select top-k tokens, reducing computational complexity for long contexts.
 - [[DOM State Compression]]: Techniques for stripping non-interactive elements from HTML to reduce token usage and improve privacy.
+- [[EASE]]: Embarrassingly Shallow Autoencoders, a linear collaborative filtering model solved via a regularized closed-form matrix inverse.
 - [[Encoder-Decoder Models]]: Transformer architectures designed for sequence-to-sequence tasks like translation and summarization (e.g., T5, BART).
 - [[Encoder-Only Models]]: Transformer architectures designed for understanding input text and generating contextual embeddings (e.g., BERT).
 - [[Fine-tuning]]: The training pipeline, from Pre-training to SFT and RLHF/DPO alignment, plus PEFT methods like LoRA.
@@ -75,6 +94,7 @@ This is the content-oriented catalog of the wiki. The LLM updates this file when
 - [[OneRec]]: An end-to-end, single-stage generative recommendation architecture scaling up to 1B parameters with Sparse MoE.
 - [[OneRec-V2]]: Second-generation generative recommendation model from Kuaishou Inc., scaling up to 8B with projection-free KV generation and user feedback RL.
 - [[Positional Encoding]]: Techniques (like Sinusoidal, RoPE, and ALiBi) used to inject sequence order information into Transformers, compensating for their lack of recurrence.
+- [[R-GCN]]: Relational Graph Convolutional Networks, a multi-relational GNN designed to propagate messages along distinct edge categories.
 - [[RAG]]: Advanced Retrieval-Augmented Generation architectures including dense/sparse retrieval, reranking, and Knowledge Graph extraction.
 - [[RankMixer]]: A compute-bound, GPU-friendly ranking network architecture from ByteDance featuring Per-Token FFNs and ReLU-MoE routing.
 - [[Request Level Batching]]: A user-centric, request-wise sample batching layout that amortizes user history sequence transfer and encoding across target candidates.
@@ -82,8 +102,10 @@ This is the content-oriented catalog of the wiki. The LLM updates this file when
 - [[RMSNorm]]: Root Mean Square Normalization, a highly efficient variant of LayerNorm that skips mean-centering to speed up training and inference in modern LLMs.
 - [[RoPE]]: A mathematical deep dive into Rotary Position Embedding, including its block-diagonal multi-dimensional formulation, efficient Hadamard product computation, Long-Range Decay proof (Abel Transformation), and LLaMA PyTorch code snippets.
 - [[Router Z-Loss]]: An auxiliary loss function that stabilizes the training of massive MoE models by penalizing the squared Log-Sum-Exp of routing logits, preventing catastrophic exponential roundoff errors in bfloat16.
-- [[RQ-VAE]]: Residual Quantized VAE recursively decomposing continuous vectors into multi-scale residual stacks to compress spatial dimensions without codebook collapse.
+- [[RQ-VAE]]: Residual Quantized Variational Autoencoder, a hierarchical vector quantization model decomposing continuous embeddings into multi-stage residual stacks to compress vector dimensionality without codebook collapse.
 - [[Self-Attention Mechanism]]: The mathematical foundation of Transformers detailing why Query, Key, and Value matrices must use independent weights to prevent identity matrix degeneration.
+- [[SeqLLM]]: Behavioral-Sequence Augmented LLM, a sequence-language framework representing events as field-level discrete tokens and injecting sequence capabilities without catastrophic forgetting.
+- [[SASRec]]: Self-Attention Sequential Recommendation, a Transformer-based decoder-only model that dynamically attends to historical item sequences to predict next actions.
 - [[Sparsely-Gated MoE Layer]]: The seminal 2017 architecture that introduced conditional computation at scale via Noisy Top-K Gating and auxiliary load-balancing losses, forming the basis for modern MoE models.
 - [[STCA]]: A linear-time target-to-history cross-attention mechanism with associative query-side algebraic optimization to bypass Key/Value HBM bottlenecks.
 - [[SwiGLU FFN]]: A gated activation variant of the feed-forward network using three projection matrices and a SiLU/Swish gate, forming the standard FFN component of modern LLMs.

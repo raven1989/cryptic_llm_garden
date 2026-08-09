@@ -295,3 +295,65 @@ Created the master compilation page `wiki/research/Mixture of Experts Summary.md
 - Created structured summary page `wiki/research/Graphormer Summary.md` detailing Pre-LN, Centrality Encoding, Spatial Encoding (via Shortest Path Distance), Path-based Edge Encoding, and the virtual `[VNode]` graph readout mechanism.
 - Created dedicated entity concept page `wiki/entities/Graphormer.md` documenting the formal deconstruction of centrality-augmented attention query-key products into four distinct semantic-structural terms, and comparing discrete spatial lookup biases with continuous linear multipliers.
 - Updated central index page `wiki/index.md` with links and short descriptions for both pages.
+
+## [2026-08-05] Ingest | Collaborative Retrieval for Large Language Model-based Conversational Recommender Systems
+- Ingested raw paper at `raw/ConversationalRecommendation/CRAG.md`.
+- Created structured summary page `wiki/research/CRAG Summary.md` detailing CRAG's overall three-stage pipeline (Entity Link, Context-Aware Collaborative Retrieval, Reflect & Rerank) and empirical findings comparing it to zero-shot and naive text-RAG baselines.
+- Created dedicated entity page `wiki/entities/CRAG.md` documenting the exact inputs, outputs, formal query rewriting, and LLM-based reflection filters of each stage.
+- Created dedicated entity page `wiki/entities/EASE.md` documenting the complete mathematics of Steck's Embarrassingly Shallow Autoencoder, deriving its closed-form regularized optimization under a zero-diagonal constraint, and detailing how CRAG adapts it to asymmetric catalog mapping.
+- Updated central index page `wiki/index.md` with links and short descriptions for all three new pages.
+
+## [2026-08-06] Ingest | Multi-Type Context-Aware Conversational Recommender Systems via Mixture-of-Experts
+- Ingested raw paper at `raw/ConversationalRecommendation/MCCRS.md`.
+- Created structured summary page `wiki/research/MCCRS Summary.md` detailing MCCRS's multi-expert architecture (Conversation Expert, Graph Expert, Review Expert) and the ChairBot routing-fusion mechanism.
+- Created dedicated entity page `wiki/entities/MCCRS.md` documenting inputs, outputs, mathematical representations, routing weight calculations, and response-bias decoder injections.
+- Created dedicated entity page `wiki/entities/R-GCN.md` documenting the formal multi-relational message-passing mechanics, overparameterization mitigation methods (basis and block-diagonal decompositions), and downstream fine-tuning objective functions.
+- Updated central index page `wiki/index.md` with links and short descriptions for all three new pages in strict alphabetical order.
+
+## [2026-08-06] Ingest | Generative Conversational Recommender System
+- Ingested raw paper at `raw/ConversationalRecommendation/GCRS_paper.md`.
+- Created structured summary page `wiki/research/GCRS Summary.md` detailing the GCRS unified next-token framework, Semantic ID construction, structured factorization, QLoRA fine-tuning parameters, and evaluation protocols. Integrated the diagram `wiki/media/Overview_of_GCRS_framework.png` at the top of the summary.
+- Created dedicated entity page `wiki/entities/GCRS.md` documenting exact metadata formatting, 4-digit code sequence wrapping, `MODE` control tokens, NF4-quantized token embeddings training configuration, and constrained beam search logic.
+- Created dedicated entity page `wiki/entities/RQ-VAE.md` documenting the mathematics of multi-stage residual vector quantization, straight-through estimators (STE), codebook updates, commitment loss functions, and its application as a semantic tokenizer.
+- Updated central index page `wiki/index.md` with links and short descriptions for all three new pages in strict alphabetical order.
+
+## [2026-08-07] Ingest | CoLLM: Integrating Collaborative Embeddings into Large Language Models for Recommendation
+- Ingested raw paper at `raw/ConversationalRecommendation/CoLLM_paper.md`.
+- Created structured summary page `wiki/research/CoLLM Summary.md` detailing the integration of low-rank collaborative embeddings into continuous LLM token input space, prompt placeholder construction, dual-phase training (LoRA task learning then CIE alignment), and performance in warm vs. cold-start scenarios. Integrated the diagram `wiki/media/architecture_of_CoLLM.png` in the summary.
+- Created dedicated entity page `wiki/entities/CoLLM.md` documenting prompt variables, continuous embedding interception equations, low-rank prior constraints compared to naive `w/ UI-token` direct vocabulary mappings, and mathematical formulations of the CIE alignment layers.
+- Updated central index page `wiki/index.md` with links and short descriptions for all new pages in strict alphabetical order.
+
+## [2026-08-08] Ingest | LLaRA: Large Language-Recommendation Assistant
+- Ingested raw paper at `raw/ConversationalRecommendation/LLaRA_paper.md`.
+- Created structured summary page `wiki/research/LLaRA Summary.md` detailing the LLaRA sequential recommendation framework, hybrid token construction (concatenating textual and behavioral tokens), list-wise ranking prompts, curriculum tuning phases, and mathematical loss formulations. Integrated both `wiki/media/LLaRA_framewrok.png` and `wiki/media/LLaRA_item_representation.png` diagrams at proper positions.
+- Created dedicated entity page `wiki/entities/LLaRA.md` documenting hybrid token representations, 2-layer MLP coordinate mapping via the SR2LLM projector, easy (text-only) vs. hard (hybrid) training objectives, and the curriculum scheduler $p(\tau)$ probability progression.
+- Updated central index page `wiki/index.md` with links and short descriptions for all new pages in strict alphabetical order.
+
+## [2026-08-08] Ingest | Conversational Recommender Systems (CRS) Synthesis Page
+- Created a comprehensive master synthesis and topic page at `wiki/research/Conversational Recommender Systems.md` tracking the evolution of the 5 studied models (CoLLM, LLaRA, CRAG, MCCRS, GCRS) on aspects like item representations, modality fusion strategies, output paradigms, training schemes, and core technical learnings (such as structured vs implicit generation, low-rank prior constraints, and curriculum prompt schedules).
+- Integrated a Mermaid flowchart illustrating the taxonomic paradigms of LLMRec (Aligned Soft-Prompts, Collaborative Retrieval, Multi-Expert Modular Fusion, and Fully Generative Autoregressive).
+- Updated central index page `wiki/index.md` with links and short descriptions for the new synthesis page.
+
+## [2026-08-08] Ingest | CTRL: Connect Collaborative and Language Model for CTR Prediction
+- Ingested raw paper at `raw/ConversationalRecommendation/CTRL_paper.md`.
+- Created structured summary page `wiki/research/CTRL Summary.md` detailing the two-stage model-agnostic alignment scheme, structured prompt construction rules, symmetric global contrastive loss, fine-grained sub-space project-alignment layers, and downstream supervised fine-tuning. Integrated the diagram `wiki/media/illustration_of_CTRL.png` at a proper position.
+- Created dedicated entity page `wiki/entities/CTRL.md` documenting punctuation syntax, dual-tower encoders (RoBERTa and lightweight tabular skeleton architectures), dual-directional InfoNCE partition functions, and the math of multi-aspect sub-space maximum correlation alignment.
+- Updated central index page `wiki/index.md` with links and short descriptions for all new pages in strict alphabetical order.
+
+## [2026-08-08] Ingest | A-LLMRec: Large Language Models meet Collaborative Filtering
+- Ingested raw paper at `raw/ConversationalRecommendation/A-LLMRec_paper.md`.
+- Created structured summary page `wiki/research/A-LLMRec Summary.md` detailing the training-free dual-stage alignment pipeline, SBERT/SASRec alignment, reconstruction losses to prevent representation collapse/over-smoothing, LLM soft-prompting, target-masked token cross-entropy training, and resource efficiency. Integrated the diagram `wiki/media/overview_of_A-LLMRec.png` at a proper position.
+- Created dedicated entity page `wiki/entities/A-LLMRec.md` documenting Stage-1 latent space expectation MSE mapping, reconstruction autoencoders, recommendation losses, Stage-2 coordinate projection, prompt templates, and causal target masking.
+- Updated central index page `wiki/index.md` with links and short descriptions for all new pages in strict alphabetical order.
+
+## [2026-08-09] Ingest | SeqLLM: Augmenting LLMs with Behavioral-Sequence Modeling for High-Stakes Decisions at WeChat Pay
+- Ingested raw paper at `raw/ConversationalRecommendation/SeqLLM_paper.md`.
+- Created structured summary page `wiki/research/SeqLLM Summary.md` detailing the field-level discrete behavioral vocabulary, shared 2-layer MLP projector ($g_{\psi}$), Stage-1 (Translation) and Stage-2 (Reasoning) alignment curriculum, Prefix-Guided Capability Injection, and industrial risk-screening deployments. Integrated the diagram `wiki/media/overview_of_SeqLLM.png` at a proper position.
+- Created dedicated entity page `wiki/entities/SeqLLM.md` documenting field-level factorization, semantic-aware embedding rescaling mathematical formulations, translation vs. reasoning SFT templates, global CPT vs. prefix-guided SFT losses, and unified capability-injection dataset optimization.
+- Updated central index page `wiki/index.md` with links and short descriptions for all new pages in strict alphabetical order.
+
+## [2026-08-09] Ingest | LC-Rec: Adapting Large Language Models by Integrating Collaborative Semantics for Recommendation
+- Ingested raw PDF paper at `raw/ConversationalRecommendation/LC-Rec_paper.pdf`.
+- Created structured summary page `wiki/research/LC-Rec Summary.md` detailing the LLaMA-based contextual metadata encoding, RQ-VAE discrete item indexing, Sinkhorn-Knopp-based optimal transport collision resolution, and the multi-task alignment-tuning curriculum (symmetric prediction, cross-modal explicit mapping, asymmetric predictions, user intent search, and personalized preference inference).
+- Created dedicated entity page `wiki/entities/LC-Rec.md` documenting contextual hidden states mean-pooling, multi-level vector quantization formulas, optimal transport uniform distribution constraints, Sinkhorn-Knopp normalizations, and conditional sequence-to-sequence loss functions.
+- Updated central index page `wiki/index.md` with links and short descriptions for all new pages in strict alphabetical order.
