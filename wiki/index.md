@@ -9,6 +9,8 @@ This is the content-oriented catalog of the wiki. The LLM updates this file when
 - [[Layer 3 - Architectures and Operators Syllabus]]: A deep-dive syllabus for Step 1 of the learning sequence, focusing on macro-architectures, micro-designs, and inference bottlenecks.
 
 ## Research & Topics
+- [[DSSM Summary]]: Microsoft Research's Deep Structured Semantic Model, projecting queries and documents into a shared semantic space via a deep network with letter-trigram word hashing, trained discriminatively on clickthrough data for web search.
+- [[DCN Summary]]: Google/Stanford's Deep & Cross Network, introducing a cross network that explicitly learns bounded-degree feature interactions for CTR prediction.
 - [[A-LLMRec Summary]]: KAIST and NAVER's training-free framework aligning frozen sequential collaborative recommenders with frozen LLMs for warm and cold scenarios.
 - [[Chronos-2 Summary]]: Amazon AWS zero-shot time series foundation model shifting to an encoder-only architecture with continuous 21-quantile regression and Group Attention.
 - [[CITRAS Summary]]: Hitachi decoder-only transformer with 2D alternating temporal-spatial attention, KV Shift, and Attention Score Smoothing.
@@ -53,6 +55,7 @@ This is the content-oriented catalog of the wiki. The LLM updates this file when
 - (Empty)
 
 ## Entities & Concepts (Cross-cutting)
+- [[DCN]]: Google/Stanford's Deep & Cross Network, introducing a cross network that explicitly learns bounded-degree feature interactions for CTR prediction.
 - [[A-LLMRec]]: All-round LLM-based Recommender, a framework aligning pre-trained collaborative user/item embeddings with frozen LLMs using dual-stage projection MLPs.
 - [[Attention Score Smoothing]]: An attention regularization technique applying EMA across temporal steps to stabilize cross-variate dependencies and filter high-frequency noise.
 - [[Group Attention]]: A masked self-attention pooling mechanism that dynamically isolates token aggregation within designated task groups.
@@ -76,6 +79,7 @@ This is the content-oriented catalog of the wiki. The LLM updates this file when
 - [[DeepSeek Shared Experts]]: An architectural innovation in DeepSeekMoE that isolates general knowledge into a set of permanently active experts, allowing the remaining routed experts to achieve fine-grained specialization.
 - [[DeepSeek Sparse Attention]]: DeepSeek-V3.2's sparse attention mechanism that uses a lightning indexer to select top-k tokens, reducing computational complexity for long contexts.
 - [[DOM State Compression]]: Techniques for stripping non-interactive elements from HTML to reduce token usage and improve privacy.
+- [[DSSM]]: Deep Structured Semantic Model, a deep architecture projecting queries and documents into a shared semantic space via letter-trigram word hashing and discriminative clickthrough training, enabling semantic matching beyond keyword overlap.
 - [[EASE]]: Embarrassingly Shallow Autoencoders, a linear collaborative filtering model solved via a regularized closed-form matrix inverse.
 - [[Encoder-Decoder Models]]: Transformer architectures designed for sequence-to-sequence tasks like translation and summarization (e.g., T5, BART).
 - [[Encoder-Only Models]]: Transformer architectures designed for understanding input text and generating contextual embeddings (e.g., BERT).

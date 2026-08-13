@@ -357,3 +357,15 @@ Created the master compilation page `wiki/research/Mixture of Experts Summary.md
 - Created structured summary page `wiki/research/LC-Rec Summary.md` detailing the LLaMA-based contextual metadata encoding, RQ-VAE discrete item indexing, Sinkhorn-Knopp-based optimal transport collision resolution, and the multi-task alignment-tuning curriculum (symmetric prediction, cross-modal explicit mapping, asymmetric predictions, user intent search, and personalized preference inference).
 - Created dedicated entity page `wiki/entities/LC-Rec.md` documenting contextual hidden states mean-pooling, multi-level vector quantization formulas, optimal transport uniform distribution constraints, Sinkhorn-Knopp normalizations, and conditional sequence-to-sequence loss functions.
 - Updated central index page `wiki/index.md` with links and short descriptions for all new pages in strict alphabetical order.
+
+## [2026-08-13] Ingest | Deep & Cross Network (DCN)
+- Ingested raw paper at `raw/Recommendation/DCN_paper.md`.
+- Created structured summary page `wiki/research/DCN Summary.md` detailing the embedding & stacking layer, cross network (residual connection, original-input read every layer, rank-one vector weight trick, linear-in-d complexity), deep network, combination layer, Theorem 3.1 polynomial approximation with a worked degree-growth example, FM generalization via parameter sharing, efficient block-diagonal projection, and experimental results on Criteo / forest covertype / Higgs. Integrated diagrams `wiki/media/DCN_network.png` and `wiki/media/DCN_cross_layer_vasualization.png` at proper positions.
+- Created dedicated entity page `wiki/entities/DCN.md` documenting the four architectural pillars, key properties table, theoretical analysis, and experimental results.
+- Updated central index page `wiki/index.md` with links and short descriptions for the new pages in strict alphabetical order.
+
+## [2026-08-13] Ingest | Deep Structured Semantic Models (DSSM)
+- Ingested raw PDF paper at `raw/Recommendation/DSSM_paper.pdf`.
+- Created structured summary page `wiki/research/DSSM Summary.md` detailing the DNN semantic-feature architecture (tanh layers, cosine relevance scoring), letter-trigram word hashing (fixed non-learned projection, 16x dimensionality reduction, OOV/morphological robustness, BOW caveat with no sequential signal), discriminative clickthrough training (softmax over clicked doc + 4 sampled negatives), implementation details, and experimental results/ablations on the 16,510-query web ranking set. Integrated the diagram `wiki/media/DSSM_illustration.png` at a proper position.
+- Created dedicated entity page `wiki/entities/DSSM.md` documenting the four architectural pillars, key properties table, training setup, and experimental results.
+- Updated central index page `wiki/index.md` with links and short descriptions for the new pages in strict alphabetical order.
