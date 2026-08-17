@@ -11,6 +11,7 @@ This is the content-oriented catalog of the wiki. The LLM updates this file when
 ## Research & Topics
 - [[DSSM Summary]]: Microsoft Research's Deep Structured Semantic Model, projecting queries and documents into a shared semantic space via a deep network with letter-trigram word hashing, trained discriminatively on clickthrough data for web search.
 - [[DCN Summary]]: Google/Stanford's Deep & Cross Network, introducing a cross network that explicitly learns bounded-degree feature interactions for CTR prediction.
+- [[DIN Summary]]: Alibaba's Deep Interest Network, introducing a local activation unit that adaptively computes user interest representations per candidate ad, plus mini-batch aware regularization and Dice activation.
 - [[NCF Summary]]: Neural Collaborative Filtering, replacing matrix factorization's fixed inner product with a learned neural interaction function (GMF, MLP, NeuMF) for implicit-feedback recommendation.
 - [[A-LLMRec Summary]]: KAIST and NAVER's training-free framework aligning frozen sequential collaborative recommenders with frozen LLMs for warm and cold scenarios.
 - [[Chronos-2 Summary]]: Amazon AWS zero-shot time series foundation model shifting to an encoder-only architecture with continuous 21-quantile regression and Group Attention.
@@ -57,6 +58,7 @@ This is the content-oriented catalog of the wiki. The LLM updates this file when
 
 ## Entities & Concepts (Cross-cutting)
 - [[DCN]]: Google/Stanford's Deep & Cross Network, introducing a cross network that explicitly learns bounded-degree feature interactions for CTR prediction.
+- [[DIN]]: Alibaba's Deep Interest Network, introducing a local activation unit for candidate-aware user interest representation, plus mini-batch aware regularization and Dice activation.
 - [[A-LLMRec]]: All-round LLM-based Recommender, a framework aligning pre-trained collaborative user/item embeddings with frozen LLMs using dual-stage projection MLPs.
 - [[Attention Score Smoothing]]: An attention regularization technique applying EMA across temporal steps to stabilize cross-variate dependencies and filter high-frequency noise.
 - [[Group Attention]]: A masked self-attention pooling mechanism that dynamically isolates token aggregation within designated task groups.
