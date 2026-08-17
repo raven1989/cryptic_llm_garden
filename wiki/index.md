@@ -109,6 +109,7 @@ This is the content-oriented catalog of the wiki. The LLM updates this file when
 - [[RQ-VAE]]: Residual Quantized Variational Autoencoder, a hierarchical vector quantization model decomposing continuous embeddings into multi-stage residual stacks to compress vector dimensionality without codebook collapse.
 - [[Self-Attention Mechanism]]: The mathematical foundation of Transformers detailing why Query, Key, and Value matrices must use independent weights to prevent identity matrix degeneration.
 - [[SeqLLM]]: Behavioral-Sequence Augmented LLM, a sequence-language framework representing events as field-level discrete tokens and injecting sequence capabilities without catastrophic forgetting.
+- [[Sinkhorn-Knopp Algorithm]]: An iterative row/column normalization procedure that projects positive matrices onto the Birkhoff polytope (doubly stochastic matrices) and differentiably solves entropy-regularized Optimal Transport, used by mHC and LC-Rec.
 - [[SASRec]]: Self-Attention Sequential Recommendation, a Transformer-based decoder-only model that dynamically attends to historical item sequences to predict next actions.
 - [[Sparsely-Gated MoE Layer]]: The seminal 2017 architecture that introduced conditional computation at scale via Noisy Top-K Gating and auxiliary load-balancing losses, forming the basis for modern MoE models.
 - [[STCA]]: A linear-time target-to-history cross-attention mechanism with associative query-side algebraic optimization to bypass Key/Value HBM bottlenecks.

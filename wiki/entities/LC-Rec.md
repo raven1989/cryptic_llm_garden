@@ -47,7 +47,7 @@ The global residual quantization and uniform mapping procedure is formally execu
     *   *Explanation:* Enter this block only when we reach the final quantization level $i = H$, where index collisions and leaf-node conflicts typically occur.
 6.  **Global Optimal Transport Alignment (Sinkhorn-Knopp):**
     $$\text{Solve } \{c_H^n\}_{n=1}^{|B|} \text{ according to Eqn. (6) via Sinkhorn-Knopp algorithm}$$
-    *   *Explanation:* Instead of greedy matching, solve the globally balanced matching matrix $q(c_H = k \mid r_H)$ over the entire batch $B$ under the **Uniform Distribution Constraint** (Equation 6) using the **Sinkhorn-Knopp algorithm**. This distributes similar items evenly and guarantees unique final coordinate indexes ($c_H^n$) for every item in the batch.
+    *   *Explanation:* Instead of greedy matching, solve the globally balanced matching matrix $q(c_H = k \mid r_H)$ over the entire batch $B$ under the **Uniform Distribution Constraint** (Equation 6) using the **[[Sinkhorn-Knopp Algorithm]]**. This distributes similar items evenly and guarantees unique final coordinate indexes ($c_H^n$) for every item in the batch.
 7.  **Terminate Level Decision:**
     $$\text{end if}$$
     *   *Explanation:* Terminate the level-wise decision block.
@@ -80,7 +80,7 @@ $$\min_{X} \sum_{r_H \in B} \sum_{k=1}^{K} q(c_H = k \mid r_H) \|r_H - \mathbf{v
 $$\text{subject to:} \quad \sum_{k=1}^{K} q(c_H = k \mid r_H) = 1 \quad \text{(Row constraint: Every item is fully assigned)}$$
 $$\sum_{r_H \in B} q(c_H = k \mid r_H) = \frac{|B|}{K} \quad \text{(Column constraint: Every codeword gets an equal, uniform share)}$$
 
-This doubly constrained allocation matrix is solved globally and differentiably during training using the **Sinkhorn-Knopp algorithm**, which iteratively normalizes the rows and columns of the exponentiated distance matrix. This guarantees 100% unique, collision-free codes while preserving physical proximity on the semantic manifold.
+This doubly constrained allocation matrix is solved globally and differentiably during training using the **[[Sinkhorn-Knopp Algorithm]]**, which iteratively normalizes the rows and columns of the exponentiated distance matrix. This guarantees 100% unique, collision-free codes while preserving physical proximity on the semantic manifold.
 
 ---
 
