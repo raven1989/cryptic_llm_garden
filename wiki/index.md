@@ -11,6 +11,7 @@ This is the content-oriented catalog of the wiki. The LLM updates this file when
 ## Research & Topics
 - [[DSSM Summary]]: Microsoft Research's Deep Structured Semantic Model, projecting queries and documents into a shared semantic space via a deep network with letter-trigram word hashing, trained discriminatively on clickthrough data for web search.
 - [[DCN Summary]]: Google/Stanford's Deep & Cross Network, introducing a cross network that explicitly learns bounded-degree feature interactions for CTR prediction.
+- [[NCF Summary]]: Neural Collaborative Filtering, replacing matrix factorization's fixed inner product with a learned neural interaction function (GMF, MLP, NeuMF) for implicit-feedback recommendation.
 - [[A-LLMRec Summary]]: KAIST and NAVER's training-free framework aligning frozen sequential collaborative recommenders with frozen LLMs for warm and cold scenarios.
 - [[Chronos-2 Summary]]: Amazon AWS zero-shot time series foundation model shifting to an encoder-only architecture with continuous 21-quantile regression and Group Attention.
 - [[CITRAS Summary]]: Hitachi decoder-only transformer with 2D alternating temporal-spatial attention, KV Shift, and Attention Score Smoothing.
@@ -95,6 +96,7 @@ This is the content-oriented catalog of the wiki. The LLM updates this file when
 - [[Multi-Head Latent Attention]]: DeepSeek's architectural innovation that drastically reduces KV Cache size by compressing Keys and Values into a single shared latent vector while decoupling RoPE to enable weight absorption.
 - [[Multi-Query Attention]]: An extreme optimization of MHA that shares a single Key and Value head across all Query heads to drastically reduce KV cache size.
 - [[Multi-Token Prediction]]: DeepSeek's sequential multi-token prediction paradigm that enables zero-overhead, highly aligned self-speculative decoding with up to 1.8x throughput speedups.
+- [[NCF]]: Neural Collaborative Filtering, a general framework learning the user–item interaction function with a neural network (GMF, MLP, NeuMF) instead of a fixed inner product.
 - [[OneRec]]: An end-to-end, single-stage generative recommendation architecture scaling up to 1B parameters with Sparse MoE.
 - [[OneRec-V2]]: Second-generation generative recommendation model from Kuaishou Inc., scaling up to 8B with projection-free KV generation and user feedback RL.
 - [[Positional Encoding]]: Techniques (like Sinusoidal, RoPE, and ALiBi) used to inject sequence order information into Transformers, compensating for their lack of recurrence.
