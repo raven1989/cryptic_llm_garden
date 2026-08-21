@@ -13,6 +13,7 @@ This is the content-oriented catalog of the wiki. The LLM updates this file when
 - [[DCN Summary]]: Google/Stanford's Deep & Cross Network, introducing a cross network that explicitly learns bounded-degree feature interactions for CTR prediction.
 - [[DIN Summary]]: Alibaba's Deep Interest Network, introducing a local activation unit that adaptively computes user interest representations per candidate ad, plus mini-batch aware regularization and Dice activation.
 - [[SIM Summary]]: Alibaba's Search-based Interest Model for lifelong user behavior sequences up to 54k items, using a cascaded GSU (hard/soft search) and ESU (temporal multi-head attention) with a 2-level User Behavior Tree index.
+- [[TWIN Summary]]: Kuaishou's TWo-stage Interest Network solving GSU–ESU inconsistency by making both stages share the identical MHTA relevance metric (structure + parameters), enabled by behavior feature splitting (cached inherent features + cross features compressed to 1-dim bias terms), scaling target attention to 10⁴–10⁵ behaviors.
 - [[NCF Summary]]: Neural Collaborative Filtering, replacing matrix factorization's fixed inner product with a learned neural interaction function (GMF, MLP, NeuMF) for implicit-feedback recommendation.
 - [[A-LLMRec Summary]]: KAIST and NAVER's training-free framework aligning frozen sequential collaborative recommenders with frozen LLMs for warm and cold scenarios.
 - [[Chronos-2 Summary]]: Amazon AWS zero-shot time series foundation model shifting to an encoder-only architecture with continuous 21-quantile regression and Group Attention.
@@ -115,6 +116,7 @@ This is the content-oriented catalog of the wiki. The LLM updates this file when
 - [[Self-Attention Mechanism]]: The mathematical foundation of Transformers detailing why Query, Key, and Value matrices must use independent weights to prevent identity matrix degeneration.
 - [[SeqLLM]]: Behavioral-Sequence Augmented LLM, a sequence-language framework representing events as field-level discrete tokens and injecting sequence capabilities without catastrophic forgetting.
 - [[SIM]]: Search-based Interest Model, a two-stage cascaded CTR prediction framework (GSU + ESU) scaling sequential user behavior modeling up to 54,000 items with sub-30ms latency.
+- [[TWIN]]: TWo-stage Interest Network, Kuaishou's lifelong behavior model where CP-GSU and ESU share one MHTA relevance metric (structure + parameters), made feasible by splitting behavior features into cacheable inherent features and 1-dim-bias cross features.
 - [[Sinkhorn-Knopp Algorithm]]: An iterative row/column normalization procedure that projects positive matrices onto the Birkhoff polytope (doubly stochastic matrices) and differentiably solves entropy-regularized Optimal Transport, used by mHC and LC-Rec.
 - [[SASRec]]: Self-Attention Sequential Recommendation, a Transformer-based decoder-only model that dynamically attends to historical item sequences to predict next actions.
 - [[Sparsely-Gated MoE Layer]]: The seminal 2017 architecture that introduced conditional computation at scale via Noisy Top-K Gating and auxiliary load-balancing losses, forming the basis for modern MoE models.
