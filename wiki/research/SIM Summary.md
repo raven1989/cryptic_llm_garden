@@ -102,6 +102,15 @@ $$\text{Loss} = \alpha \text{Loss}_{\text{GSU}} + \beta \text{Loss}_{\text{ESU}}
 - **Soft-Search:** $\alpha = 1, \beta = 1$.
 - **Hard-Search:** $\alpha = 0, \beta = 1$ (non-parametric GSU).
 
+> [!note] What $\text{Loss}_{\text{GSU}}$ and $\text{Loss}_{\text{ESU}}$ actually are
+> The paper never writes out either loss in closed form — it states only that both units are "trained simultaneously under Cross-entropy loss function." Both are the **same standard binary cross-entropy (log loss) over the click label**:
+> $$\text{Loss} = -\frac{1}{N}\sum_{(x,y)\in\mathcal{D}}\Big[y\log p(x) + (1-y)\log\big(1-p(x)\big)\Big]$$
+> They share the same formula and the same ground-truth label $y$, but they are **not the same loss value**, because $p(x)$ comes from two different prediction heads:
+> - **$\text{Loss}_{\text{GSU}}$ (auxiliary task):** $p(x)$ is the sigmoid output of the auxiliary MLP fed with $\text{concat}(\mathbf{U}_r, \mathbf{e}_a)$, where $\mathbf{U}_r = \sum_{i=1}^{T} r_i \mathbf{e}_i$ is the soft-search relevance-weighted pooling over the *full* long sequence. Its sole purpose is to train the GSU embedding/projection parameters ($W_a, W_b$) so Top-K retrieval is meaningful.
+> - **$\text{Loss}_{\text{ESU}}$ (main task):** $p(x)$ is the sigmoid output of the final MLP fed with the multi-head attention output $U_{lt}$ over the filtered Top-$K$ sub-sequence. This is the CTR objective actually used in production.
+>
+> This is also why Hard-Search sets $\alpha = 0$: a non-parametric GSU has no trainable parameters, so its auxiliary loss is simply dropped.
+
 ---
 
 ## 3. Industrial Online Serving & System Co-design

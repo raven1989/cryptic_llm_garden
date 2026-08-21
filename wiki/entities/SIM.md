@@ -32,7 +32,20 @@ $$r_i = \begin{cases} \text{Sign}(C_i = C_a) & \text{Hard-Search (Non-Parametric
   $$\mathbf{att}^i_{\text{score}} = \text{Softmax}(W_{bi}\mathbf{z}_b \odot W_{ai}\mathbf{e}_a), \quad \mathbf{head}_i = \mathbf{att}^i_{\text{score}} \mathbf{z}_b$$
   $$U_{lt} = \text{concat}(\mathbf{head}_1; \dots; \mathbf{head}_q)$$
 
-### 4. System Co-Design: User Behavior Tree (UBT)
+### 4. Joint Training Objective
+
+GSU and ESU are trained simultaneously under a weighted multi-task cross-entropy loss:
+
+$$\text{Loss} = \alpha\,\text{Loss}_{\text{GSU}} + \beta\,\text{Loss}_{\text{ESU}}$$
+
+Both terms are the **same standard binary cross-entropy (log loss)** over the click label $y$; the paper never writes either one out in closed form. They differ only in which prediction head produces $p(x)$:
+
+- **$\text{Loss}_{\text{GSU}}$ (auxiliary):** sigmoid of the auxiliary MLP over $\text{concat}(\mathbf{U}_r, \mathbf{e}_a)$, where $\mathbf{U}_r = \sum_i r_i\mathbf{e}_i$ is the relevance-weighted pooling over the full long sequence. Exists solely to train the soft-search embedding/projection parameters ($W_a, W_b$).
+- **$\text{Loss}_{\text{ESU}}$ (main):** sigmoid of the final MLP over the multi-head attention output $U_{lt}$ on the filtered Top-$K$ sub-sequence. This is the production CTR objective.
+
+Loss weights: **Soft-Search** uses $\alpha = 1, \beta = 1$; **Hard-Search** uses $\alpha = 0, \beta = 1$ (a non-parametric GSU has nothing to train, so its auxiliary loss is dropped).
+
+### 5. System Co-Design: User Behavior Tree (UBT)
 - Distributed 2-level `Key-Key-Value` index: $\text{User ID} \to \text{Category ID} \to [\text{Items} + \text{Timestamps}]$ (size: $\sim 22\text{ TB}$).
 - Turns online candidate search into an $O(1)$ category lookup.
 - Combined with GPU deep kernel fusion, handles 54,000 behavior sequence items with only **5ms latency increase** over truncated 1,000-item baselines.
