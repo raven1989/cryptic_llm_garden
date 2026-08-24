@@ -14,6 +14,7 @@ This is the content-oriented catalog of the wiki. The LLM updates this file when
 - [[DIN Summary]]: Alibaba's Deep Interest Network, introducing a local activation unit that adaptively computes user interest representations per candidate ad, plus mini-batch aware regularization and Dice activation.
 - [[SIM Summary]]: Alibaba's Search-based Interest Model for lifelong user behavior sequences up to 54k items, using a cascaded GSU (hard/soft search) and ESU (temporal multi-head attention) with a 2-level User Behavior Tree index.
 - [[TWIN Summary]]: Kuaishou's TWo-stage Interest Network solving GSU–ESU inconsistency by making both stages share the identical MHTA relevance metric (structure + parameters), enabled by behavior feature splitting (cached inherent features + cross features compressed to 1-dim bias terms), scaling target attention to 10⁴–10⁵ behaviors.
+- [[LONGER Summary]]: ByteDance's RecSys 2025 end-to-end ultra-long (10K) sequence transformer, abandoning two-stage retrieval via token merge (InnerTrans), recent-k query sampling, global-token anchors, and hybrid causal attention — with synchronous GPU training, KV-cache serving, and industrial scaling laws.
 - [[NCF Summary]]: Neural Collaborative Filtering, replacing matrix factorization's fixed inner product with a learned neural interaction function (GMF, MLP, NeuMF) for implicit-feedback recommendation.
 - [[A-LLMRec Summary]]: KAIST and NAVER's training-free framework aligning frozen sequential collaborative recommenders with frozen LLMs for warm and cold scenarios.
 - [[Chronos-2 Summary]]: Amazon AWS zero-shot time series foundation model shifting to an encoder-only architecture with continuous 21-quantile regression and Group Attention.
@@ -69,6 +70,7 @@ This is the content-oriented catalog of the wiki. The LLM updates this file when
 
 - [[Agents]]: Workflows, State Machines, multi-agent systems, and tool calling sandboxes.
 - [[ALiBi]]: Attention with Linear Biases, a positional encoding method that applies distance penalties directly to attention scores to enable length extrapolation.
+- [[Attention Sink]]: The StreamLLM phenomenon where deep layers dump attention on initial tokens; LONGER counteracts it by injecting global-token anchors.
 - [[Balanced K-means]]: An optimized clustering algorithm with strict cluster-capacity constraints used to generate balanced semantic IDs.
 - [[Beam Search]]: A heuristic search decoding algorithm that balances the speed of greedy search with the optimality of exhaustive search by maintaining a fixed beam width of candidates.
 - [[COMET]]: Codebook-based online-adaptive multi-scale embedding combining dual-path patching, vector-quantized coreset, local scaling distance, and test-time adaptation.
@@ -77,6 +79,7 @@ This is the content-oriented catalog of the wiki. The LLM updates this file when
 - [[CTRL]]: Connect Collaborative and Language Model, a multi-modal CTR prediction framework aligning tabular features with textual semantic features using dual-encoders.
 - [[GCRS]]: Generative Conversational Recommender System, a unified next-token prediction framework representing items as discrete RQ-VAE coordinates.
 - [[LC-Rec]]: Language-Collaborative Recommender, a generative recommendation framework utilizing Sinkhorn-Knopp optimal transport constraints and multi-task alignment.
+- [[LONGER]]: ByteDance's end-to-end ultra-long (10K) sequence transformer for industrial recommenders, replacing two-stage retrieval with token merge, recent-k query sampling, global tokens, and KV-cache serving.
 - [[LLaRA]]: Large Language-Recommendation Assistant, an aligned multi-modal sequential recommendation framework using an MLP projector (SR2LLM).
 - [[MCCRS]]: Multi-Type Context-Aware Conversational Recommender System, a modular MoE-based architecture managed by a ChairBot.
 - [[Decoder-Only Models]]: Transformer architectures designed exclusively for auto-regressive text generation (e.g., GPT, LLaMA).
