@@ -58,3 +58,9 @@ $$
 - The scalar $m$ is mathematically pulled out of the constant linear bias matrix, multiplying against the relative distance.
 - The attention scores ($q_i \cdot k_j$) are explicitly shown as the dot product between queries and keys.
 - Positional embeddings are omitted from the initial embeddings entirely.
+
+## Related Pages
+- [[Positional Encoding]]: The high-level overview page comparing ALiBi with Sinusoidal and RoPE.
+- [[RoPE]]: The mainstream rotary position encoding that does *not* extrapolate unmodified — contrast with ALiBi's built-in extrapolation.
+- [[Long-Context Positional Encoding]]: Deep dive on RoPE extrapolation fixes, where ALiBi serves as the naturally-extrapolating contrast case.
+- [[Pre-training Large Language Models]]: Chapter 15 cites ALiBi (with T5 bias and xPos) as an example of position encodings with extrapolation ability in long-context modeling.

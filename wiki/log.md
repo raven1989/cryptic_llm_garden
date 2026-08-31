@@ -419,3 +419,51 @@ Created the master compilation page `wiki/research/Mixture of Experts Summary.md
 - Created dedicated entity page `wiki/entities/LONGER.md` documenting the five architectural pillars, key properties table, and experimental/business highlights.
 - Created new entity page `wiki/entities/Attention Sink.md` for the StreamLLM effect that LONGER's global tokens counteract.
 - Updated central catalog `wiki/index.md` with `[[LONGER Summary]]`, `[[LONGER]]`, and `[[Attention Sink]]` entries. Cross-linked against `[[SIM]]`, `[[TWIN]]`, `[[STCA]]`, `[[HSTU]]`, `[[KV Cache]]`, `[[Positional Encoding]]`.
+
+## [2026-08-31] Ingest | 第十五章预训练大语言模型 (Part 1: Data Sources & Distribution)
+- Read raw source `raw/LLM/第十五章预训练大语言模型.md` (Transformers 快速入门, based on 赵鑫等《大语言模型》2024).
+- Created `wiki/research/Pre-training Data Sources and Distribution.md` covering §15.1's data-source taxonomy (general vs. specialized text: multilingual / scientific / code) and Figure 15-1's pre-training data distribution across 15 representative LLMs (T5, Falcon, LLaMA, GPT-3, Yi, MT-NLG, Gopher, Chinchilla, GLaM, PaLM, LaMDA, Galactica, GPT-NeoX, CodeGen, AlphaCode), with the legend's datasets listed in a categorized table (C4, OpenWebText, Wikipedia, the Pile subsets, BookCorpus, CC-Stories-R, CC-NEWES, BigQuery).
+- Downloaded Figure 15-1 and saved it locally as `wiki/media/pretrain_data_dist_of_llms.jpg`, embedded in the new page.
+- Updated `wiki/index.md` with the new page entry.
+
+## [2026-08-31] Rename | Pre-training Data Sources and Distribution → Pre-training Large Language Models
+- Renamed `wiki/research/Pre-training Data Sources and Distribution.md` to `wiki/research/Pre-training Large Language Models.md` so the page serves as the growing Chapter 15 summary (parts appended one by one) rather than a Part-1-only page.
+- Restructured the page: chapter-level H1 + intro, Part 1 content moved under a "Part 1: Data Preparation — Sources & Distribution" section; old title kept as an alias in frontmatter.
+- Updated the entry in `wiki/index.md`.
+
+## [2026-08-31] Ingest | 第十五章预训练大语言模型 (Part 2: Data Preprocessing)
+- Appended "Part 2: Data Preprocessing (数据预处理, §15.1.1)" to `wiki/research/Pre-training Large Language Models.md`: the four-step pipeline — quality filtering (heuristic rules with concrete statistical/keyword examples; classifier-based options FastText/BERT/GPT-4 with efficiency trade-offs and the cascade strategy), sensitive-content filtering (Jigsaw toxicity classifier; Dolma PII rules with the <5 replace / ≥6 delete policy), deduplication (granularity levels; exact matching via suffix arrays, approximate matching via MinHash/LSH), and tokenization (BPE/WordPiece/Unigram, custom SentencePiece tokenizers) — plus the quantity/quality/repetition/privacy impact summary (incl. hallucination and double descent).
+- Downloaded Figure 15-2 (preprocessing pipeline) as `wiki/media/pretrain_data_preprocess.jpg` and embedded it in the new section.
+- Updated `wiki/index.md` entry for the page.
+
+## [2026-08-31] Rework | Pre-training LLMs Part 2 restructured as table
+- Rewrote Part 2 (Data Preprocessing) of `wiki/research/Pre-training Large Language Models.md` per user feedback (wall of text): the four pipeline steps (quality filtering, sensitive-content filtering, deduplication, tokenization) are now summarized in a single table with columns Step / Problem to be solved / Methodology / Handful tools; kept the "Why Data Quantity and Quality Matter" bullets.
+
+## [2026-08-31] Create | Entities: Perplexity, Locality-Sensitive Hashing, Tokenizer
+- Created three entity pages from the Q&A discussion during the Chapter 15 ingest:
+  - `wiki/entities/Perplexity.md` — PPL definition, fluency-vs-factuality caveats, dual role as LM evaluation metric and data-filtering heuristic.
+  - `wiki/entities/Locality-Sensitive Hashing.md` — LSH vs. ordinary hashing, MinHash's minimum-signature trick and why P(collision)=Jaccard (randomness as the sampling mechanism), banding, other LSH families, role in corpus deduplication.
+  - `wiki/entities/Tokenizer.md` — BPE (frequency merging, byte-level BBPE), WordPiece (PMI-style likelihood-gain merging, `##` convention), Unigram (top-down pruning with the exact ΔNLL loss definition, EM, Viterbi/sampling segmentation, subword regularization), SentencePiece framework (no pre-tokenization, `▁` escaping, byte_fallback), and Chinese tokenizer practice (Qwen/DeepSeek vs. LLaMA).
+- Applied the entities in `wiki/research/Pre-training Large Language Models.md`: wikilinks added inside the Part 2 pipeline table (Perplexity in quality filtering, LSH in dedup tools, Tokenizer in tokenization) and in the Related Pages section.
+- Added all three entries to `wiki/index.md` under Entities & Concepts.
+
+## [2026-08-31] Ingest | 第十五章预训练大语言模型 (Part 4: Long-Context Modeling)
+- Appended "Part 4: Long-Context Modeling (长上下文模型, §15.2.2)" to `wiki/research/Pre-training Large Language Models.md`, ahead of the still-pending Part 3 (mainstream architectures, §15.2.1) for which a placeholder was inserted:
+  - Direction 1 — extending position encodings: RoPE's poor unmodified extrapolation, position interpolation/truncation; extrapolation-capable encodings (T5 bias, ALiBi, xPos) with the generation-vs-understanding caveat.
+  - Direction 2 — restructuring the context window: three methods (parallel context windows, Λ-shaped window, token selection with kNN/chunk-similarity flavors) summarized in a table with mechanisms and drawbacks.
+- Downloaded Figure 15-5 as `wiki/media/pretrain_context_window_methods.jpg` and embedded it in the section.
+- Cross-linked `[[RoPE]]` and `[[ALiBi]]` from the new section; added "Related Pages" sections to both entity pages linking back.
+- Updated `wiki/index.md` entry for the page.
+
+## [2026-08-31] Create | Entity: Long-Context Positional Encoding
+- Created `wiki/entities/Long-Context Positional Encoding.md` consolidating the long-context discussion: the RoPE relative-yet-bounded paradox (low-frequency subspace OOD with a d=128/b=10000 numeric table), the complete RoPE formula with notation pinned (m = absolute position, θ_i = b^{-2i/d}), PI and sliding-window truncation, the NTK-aware → Dynamic NTK → YaRN evolution (frequency ramps, per-band interpolation, temperature correction), base enlargement (LLaMA-3 500K, Qwen2 1M), a six-method comparison table, and the DeepSeek-V4 1M case study (Partial RoPE on last 64 dims + output de-rotation; CSA+HCA compression with lightning indexer, sliding-window branch, attention sink; 4K→16K→64K→1M curriculum with dense→sparse staging; honest 128K/512K limits).
+- Referenced the entity from `wiki/research/Pre-training Large Language Models.md` (Part 4 direction-1 paragraph + Related Pages), and added reciprocal cross-links on `wiki/entities/RoPE.md` and `wiki/entities/ALiBi.md`.
+- Added the entry to `wiki/index.md` under Entities & Concepts.
+
+## [2026-08-31] Ingest | 第十五章预训练大语言模型 (Parts 3, 5, 6 — chapter complete)
+- Completed the remaining parts of `wiki/research/Pre-training Large Language Models.md`:
+  - Part 3: Mainstream Architectures (§15.2.1) — encoder-decoder vs. causal decoder vs. prefix decoder attention patterns table (Flan-T5 / GPT / GLM-130B, U-PaLM), with Figure 15-4 embedded.
+  - Part 5: Data Scheduling (§15.1.2) — data mixing (LLaMA reference mix, diversity / learned-mixture / capability-targeting strategies) and data curricula table (CodeLLaMA 2T→500B, CodeLLaMA-Python +100B, Llemma +50–200B math with 5% general regularization, CodeLLaMA 4K→16K long-context).
+  - Part 6: Model Pre-training (§15.3) — objectives table (LM, Prefix LM, FIM, DAE, MoD/UL2 with S/R/X denoisers), optimization settings (dynamic batch ramp, warmup+decay LR with GPT-3/LLaMA peaks, Adam/AdamW/Adafactor hyperparameters, gradient clipping 1.0, checkpoints, weight decay 0.1), and scalable training (3D parallelism table, ZeRO/FSDP, FP16 vs. BF16 mixed precision), with Figures 15-7 and 15-8 embedded.
+- Downloaded Figures 15-4, 15-7, 15-8 as `wiki/media/pretrain_architecture_of_llms.jpg`, `pretrain_lr_decay_strategy.jpg`, `pretrain_parallel_training.jpg`.
+- Updated the page intro (all parts covered) and the `wiki/index.md` entry to reflect the complete six-part summary.

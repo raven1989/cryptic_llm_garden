@@ -34,6 +34,7 @@ This is the content-oriented catalog of the wiki. The LLM updates this file when
 - [[Encoder Only, Encoder Decoder, And Decoder Only Models]]: An overview summarizing the three primary macro-architectures in transformer-based NLP and their distinct use cases.
 - [[LLM Inference VRAM and Compute Estimation]]: Mathematical formulas for calculating the precise memory footprint of the KV Cache and the computational FLOPs required during the Prefill and Decode stages.
 - [[十分钟看懂RoPE Summary]]: A deep dive article detailing the mathematical proofs, long-range decay (Abel transformation), extrapolation properties, and PyTorch production code (LLaMA) for Rotary Position Embedding.
+- [[Pre-training Large Language Models]]: Complete Chapter 15 summary in six parts — data-source taxonomy + data-mix distribution of 15 representative models (Part 1); the preprocessing pipeline: quality filtering, sensitive-content filtering, deduplication (MinHash/LSH), tokenization (Part 2); encoder-only/causal-decoder/prefix-decoder architectures (Part 3); long-context modeling via position-encoding extension and context-window restructuring (Part 4); data scheduling: mixture ratios and curricula for code/math/long-context (Part 5); and pre-training objectives (LM/Prefix-LM/FIM/DAE/MoD), optimization settings, and 3D parallelism + ZeRO + mixed precision (Part 6).
 - [[Why is Attention divided by Root d_k]]: A mathematical breakdown of why the dot product of Query and Key vectors in Transformers is scaled by $\sqrt{d_k}$ to prevent variance growth and vanishing gradients.
 - [[Web Agent Architecture]]: An analysis of 4 different architectural paradigms for building AI web agents.
 - [[Taxy.ai Implementation]]: Code-level analysis of how Taxy.ai extracts DOM state and executes hardware-level actions.
@@ -97,6 +98,9 @@ This is the content-oriented catalog of the wiki. The LLM updates this file when
 - [[Graphormer]]: A graph-configured Transformer architecture incorporating centrality, topological distance (SPD), and edge features directly into the self-attention logits.
 - [[GShard]]: Google's 600B parameter MoE architecture that introduced Top-2 gating, proportional random dropping, and a differentiable auxiliary loss to successfully scale transformers across distributed TPUs.
 - [[KV Cache]]: The Key-Value cache optimization used during autoregressive generation to trade VRAM for compute speed.
+- [[Locality-Sensitive Hashing]]: Hash families where collision probability equals similarity — covering MinHash's min-signature trick for Jaccard estimation, banding, and its role in web-scale pre-training deduplication.
+- [[Long-Context Positional Encoding]]: Why relative RoPE still fails to extrapolate (low-frequency subspaces), and the full remedy landscape — PI, sliding-window truncation, NTK-aware / Dynamic NTK / YaRN frequency scaling, base enlargement — plus the DeepSeek-V4 1M-context case study.
+- [[Perplexity]]: The exponentiated average negative log-likelihood metric, doubling as an LM evaluation metric and a data-quality heuristic for pre-training corpus filtering.
 - [[mHC]]: Manifold-Constrained Hyper-Connections, a method for widening residual streams while maintaining stability by projecting matrices onto the Birkhoff polytope using the Sinkhorn-Knopp algorithm.
 - [[Model Flops Utilization]]: A hardware-efficiency metric measuring actual vs. theoretical peak FLOPs, crucial for scaling recommendations.
 - [[Multi-Head Attention]]: The structural enhancement that splits attention into parallel subspaces to prevent attention thinning without adding compute.
@@ -128,6 +132,7 @@ This is the content-oriented catalog of the wiki. The LLM updates this file when
 - [[Switch Transformer]]: Google's 2021 architecture that simplified MoEs using Top-1 Routing, introduced a scale-invariant load balancing loss, and utilized Selective Precision to train stable trillion-parameter models.
 - [[Symbolic Discretization]]: The process of mapping continuous time-series numerical sequences into discrete symbolic tokens to bridge the gap with language-based models.
 - [[TokenCast]]: An LLM-driven context-aware time series forecasting framework using decoupled reversible instance normalization and vocabulary-level symbolic discretization.
+- [[Tokenizer]]: Subword tokenization for LLMs — BPE/WordPiece/Unigram algorithms compared (merge vs. prune, frequency vs. likelihood), the SentencePiece framework, and Chinese tokenization practice.
 - [[Transformers]]: Foundation model architectures, including MoE and SSM, along with micro-designs like FlashAttention and RoPE.
 - [[Variational Autoencoder]]: The continuous, probabilistic generative autoencoder mapping features to Gaussian distributions using KL divergence and ELBO maximization.
 - [[Vector Database]]: Storage and search mechanisms for embeddings using algorithms like HNSW and IVF-PQ.

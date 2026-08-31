@@ -93,3 +93,9 @@ def apply_rotary_emb(xq, xk, freqs_cis):
     
     return xq_out.type_as(xq), xk_out.type_as(xk)
 ```
+
+## Related Pages
+- [[Positional Encoding]]: The high-level overview page comparing RoPE with Sinusoidal and ALiBi.
+- [[ALiBi]]: A linear-bias positional encoding with built-in length extrapolation — contrast with RoPE, which needs interpolation/truncation modifications for long contexts.
+- [[Long-Context Positional Encoding]]: The dedicated deep dive on RoPE's extrapolation failure and the PI / NTK / YaRN / base-scaling remedies.
+- [[Pre-training Large Language Models]]: Chapter 15 covers RoPE-based long-context extension (position interpolation/truncation) in its long-context modeling section.
