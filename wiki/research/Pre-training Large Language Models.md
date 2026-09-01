@@ -54,6 +54,29 @@ The figure compares the corpus composition of 15 models (T5, Falcon, LLaMA, GPT-
 - **Specialized models still keep general data.** Even CodeGen (a code model) retains a majority of non-code data — even professional models mix in webpage data to preserve general semantic knowledge. AlphaCode (100% code) is the exception.
 - **Dialogue-heavy mixes match product goals.** PaLM (50%), LaMDA (50%), and GLaM (30%) weight conversation data heavily, reflecting their chat-oriented design.
 
+### Chinese Pre-training Corpora (中文预训练语料)
+
+The sections above describe the general (mostly English-centric) data landscape. Chinese pre-training corpora follow the same general/specialized taxonomy, but the concrete datasets differ:
+
+| Corpus | Size | Notes |
+|---|---|---|
+| **WuDaoCorpora** (悟道) | 2TB | Multi-source (news, encyclopedia, forums, papers); adds medical/legal/financial domain labels; >10× CLUECorpus2020. 北京智源人工智能研究院 (BAAI) |
+| **CLUECorpus2020** | 100GB | Cleaned Chinese subset of Common Crawl. CLUE |
+| **SkyPile-150B** (天工) | 600GB / 150B tokens | ~233M unique webpages, purpose-built for LLM pre-training. 昆仑万维 (open source) |
+| **MNBVC** | very large | Everything-text Chinese corpus: news, essays, novels, books, magazines, papers, subtitles, posts, wiki, poetry, lyrics. Open community |
+| **Wanjuan** (万卷) | multimodal | Multimodal corpus covering Chinese+English LLM training. 上海人工智能实验室 |
+| **Fineweb-edu-chinese / v2** | ~420B tokens (v2) | High-quality education-value-curated corpus from OpenCSG; ~188M curated texts, selected by an education-value scoring model |
+| **Cosmopedia-chinese** | – | Synthetic Chinese textbook/encyclopedia corpus |
+| **Smoltalk-chinese** | – | Chinese dialogue corpus |
+
+**Domain-specialized Chinese corpora** mirror the specialized-text taxonomy: finance (度小满轩辕金融语料 — 金融资讯、研报公告、金融百科、金融论坛、金融书籍), math/science (synthetic math CoT, Lean formalized math), and code (Chinese GitHub projects, Chinese StackExchange content).
+
+**Chinese/English mixing ratio (中英配比)** also differs by model goal:
+
+- **Chinese-dominant models:** Chinese:English ≈ 9:1 or higher (e.g., 度小满轩辕金融大模型 uses 9:1).
+- **Bilingual-balanced models:** Qwen, Baichuan mix Chinese+English, keeping a higher English share to preserve English ability.
+- **Chinese incremental pre-training:** when continuing from an English base (e.g., LLaMA), the Chinese share is raised gradually.
+
 ## Part 2: Data Preprocessing (数据预处理, §15.1.1)
 
 After collection, raw text must be cleaned of low-quality, redundant, irrelevant, and harmful content. The chapter recommends a systematic framework (e.g., the open-source [Data-Juicer](https://dl.acm.org/doi/abs/10.1145/3626246.3653385)) running a standard pipeline:
