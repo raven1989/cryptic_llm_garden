@@ -467,3 +467,16 @@ Created the master compilation page `wiki/research/Mixture of Experts Summary.md
   - Part 6: Model Pre-training (§15.3) — objectives table (LM, Prefix LM, FIM, DAE, MoD/UL2 with S/R/X denoisers), optimization settings (dynamic batch ramp, warmup+decay LR with GPT-3/LLaMA peaks, Adam/AdamW/Adafactor hyperparameters, gradient clipping 1.0, checkpoints, weight decay 0.1), and scalable training (3D parallelism table, ZeRO/FSDP, FP16 vs. BF16 mixed precision), with Figures 15-7 and 15-8 embedded.
 - Downloaded Figures 15-4, 15-7, 15-8 as `wiki/media/pretrain_architecture_of_llms.jpg`, `pretrain_lr_decay_strategy.jpg`, `pretrain_parallel_training.jpg`.
 - Updated the page intro (all parts covered) and the `wiki/index.md` entry to reflect the complete six-part summary.
+
+## [2026-08-31] Ingest | LLM Performance Evaluation Methods (§5.2)
+- Read raw source `raw/LLM/LLM技术报告.md`, focusing on §5.2 性能评估方法和指标.
+- Created `wiki/research/LLM Performance Evaluation Methods.md` recording **all** evaluation methods with 评测集→评测方面 mappings:
+  - Automated metrics: Perplexity, BLEU, ROUGE, F1/accuracy/precision/recall.
+  - Task-specific benchmarks table mapping each 评测集 to the capability it probes: MMLU (57-discipline knowledge/reasoning), HellaSwag (commonsense), TruthfulQA (factuality/hallucination), GSM8K (math), HumanEval/MBPP (code), BIG-bench (200+ tasks broad), plus SuperGLUE, ARC, DROP, Math.
+  - Leaderboards: HF Open LLM Leaderboard, LiveBench, Vellum AI.
+  - Human evaluation: preference ranking, dialogue quality, factuality, safety.
+  - LLM-as-a-Judge: G-Eval, Reason-then-Score (RTS), with limitations.
+  - Modality/dialogue benchmarks: MMBench, MME, Chatbot Arena (Bradley-Terry), OpenLLM Leaderboard.
+  - Challenges: metric limits, hallucination, safety/bias, dynamism, cost.
+- Updated `wiki/index.md` with the new page entry.
+
