@@ -480,3 +480,41 @@ Created the master compilation page `wiki/research/Mixture of Experts Summary.md
   - Challenges: metric limits, hallucination, safety/bias, dynamism, cost.
 - Updated `wiki/index.md` with the new page entry.
 
+## [2026-09-08] Ingest | RL — Proximal Policy Optimization (PPO) Explained
+- Ingested raw source `raw/LLM/RL/RL — Proximal Policy Optimization (PPO) Explained.md`.
+- Synthesized the interactive Q&A session into a comprehensive, Chinese research page `wiki/research/Proximal Policy Optimization Summary.md` organized along a progressive cognitive learning path:
+  - Theoretical roots: Minorize-Maximization (MM), Trust Region, and why TRPO's 2nd-order Fisher inverse doesn't scale to LLMs.
+  - Deconstruction of $L(\theta)$: Token-level probability ratio $r_t(\theta)$ under Teacher Forcing on frozen rollout scripts (clarifying storage requirements and token consistency).
+  - Four-model orchestration in LLM RLHF: Actor ($\pi_\theta$), Reference ($\pi_{ref}$ with token-level KL penalty $-\beta \text{KL}_t$), Reward Model ($r_\psi$ scoring final EOS with Bradley-Terry loss), and Critic ($V_\phi$).
+  - Advantage formulation: Evolution from Monte Carlo ($G_t - V$) and 1-step TD ($\delta_t$) to Generalized Advantage Estimation (GAE) with telescoping sum proof for $\lambda=1$ and $\lambda=0$.
+  - Critic updates: Regression target $V_t^{target} = \hat{A}_t + V_{old}$, temporal causality justifying fitting $V(s_t)$ instead of $V(s_{t+1})$, and mathematical rationale for using $\max$ in value-clip loss to clear gradients beyond bounds.
+  - Actor clipping dynamics: Behavior under positive vs. negative advantage, pessimistic lower bound ($\min$), and policy entropy regularization.
+- Created dedicated cross-cutting entities in `wiki/entities/`:
+  - `[[Proximal Policy Optimization]]`
+  - `[[Generalized Advantage Estimation]]`
+  - `[[Reward Model]]`
+  - `[[Critic Model]]`
+- Conducted thorough review against every user inquiry in the learning thread and enriched `wiki/research/Proximal Policy Optimization Summary.md`:
+  - Concrete token-by-token numerical walkthrough and PyTorch `gather` code for importance sampling ratios.
+  - Reward Model score calibration, running mean/std whitening, and clipping $[-5, +5]$ to handle Bradley-Terry translation invariance.
+  - Schulman's strictly non-negative token-level KL estimator ($u_t - 1 - \log u_t$).
+  - Full concept distinction table ($V(s_t)$, $r_t$, $Q(s_t, a_t)$, $\hat{A}_t$).
+  - Critic cold-start bootstrapping via EOS physical ground truth and warm-up scheduling.
+  - Full, production-ready PyTorch implementations for `compute_gae`, `compute_actor_loss`, and `compute_critic_loss`.
+- Updated `wiki/entities/Fine-tuning.md` to integrate reciprocal wikilinks to PPO and Reward Model concepts.
+- Updated `wiki/index.md` cataloging the new research topic and entity pages.
+
+## [2026-09-10] Ingest | LoRA (Low-Rank Adaptation)
+- Ingested raw source `raw/LLM/FineTune/LoRA-Hugging Face.md`.
+- Created structured entity page `wiki/entities/LoRA.md` covering the intrinsic rank hypothesis, mathematical formulation ($\Delta W = \frac{\alpha}{r} B \cdot A$), Gaussian/Kaiming and LoftQ initialization, structural re-parameterization (zero inference latency merge), `LoraConfig` key parameters (`r`, `lora_alpha`, `target_modules="all-linear"`, `use_rslora`), and PEFT adapter lifecycle management APIs (`merge_and_unload`, `merge_adapter`, `unmerge_adapter`, `unload`, `add_weighted_adapter`).
+- Embedded architectural diagram `wiki/media/LoRA.png` at the top of the LoRA page.
+- Updated `wiki/entities/Fine-tuning.md` cross-linking to `[[LoRA]]`.
+- Updated central index `wiki/index.md` cataloging `[[LoRA]]` under Entities & Concepts.
+
+## [2026-09-10] Create | InfoNCE Loss Entity
+- Created dedicated entity page `wiki/entities/InfoNCE Loss.md` detailing the mathematical formula, mutual information lower bound derivation, Softmax cross-entropy equivalence, the role of temperature $\tau$ on hard negatives, and PyTorch implementations (In-Batch negatives and explicit negative queue).
+- Documented key industrial variants across CV, NLP, Multimodal (CLIP), and RecSys.
+- Cataloged `[[InfoNCE Loss]]` in `wiki/index.md`.
+
+
+

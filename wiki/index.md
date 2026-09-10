@@ -56,6 +56,7 @@ This is the content-oriented catalog of the wiki. The LLM updates this file when
 - [[LLaRA Summary]]: USTC and PolyU's Large Language-Recommendation Assistant utilizing hybrid prompting and progressive curriculum prompt tuning for sequential recommendation.
 - [[MCCRS Summary]]: UESTC, Tongji, and SWUFE's Multi-Type Context-Aware Conversational Recommender System using Mixture-of-Experts.
 - [[SeqLLM Summary]]: WeChat Pay and SJTU's framework injecting long behavioral-sequence modeling into LLMs for high-stakes merchant risk control and SOTA recommendation.
+- [[Proximal Policy Optimization Summary]]: A comprehensive deep dive into PPO and LLM RLHF alignment, breaking down the surrogate objective, Importance Sampling token probabilities, four-model orchestration (Actor, Critic, RM, Reference), Advantage estimation (MC, TD, GAE), Critic regression and pessimistic bounds, and PPO-Clip dynamics.
 
 ## Media Companion (Books, Movies, etc.)
 
@@ -78,8 +79,10 @@ This is the content-oriented catalog of the wiki. The LLM updates this file when
 - [[COMET]]: Codebook-based online-adaptive multi-scale embedding combining dual-path patching, vector-quantized coreset, local scaling distance, and test-time adaptation.
 - [[CoLLM]]: Collaborative Large Language Model, a framework aligning low-rank traditional collaborative embeddings with LLM token embedding space.
 - [[CRAG]]: Collaborative Retrieval Augmented Generation, a pipeline bridging dialogue context and behavioral user-item interaction data using LLMs.
+- [[Critic Model]]: A state-value estimator network ($V(s)$) serving as the baseline for generalized advantage estimation, value-clip loss bounds, and variance reduction in PPO.
 - [[CTRL]]: Connect Collaborative and Language Model, a multi-modal CTR prediction framework aligning tabular features with textual semantic features using dual-encoders.
 - [[GCRS]]: Generative Conversational Recommender System, a unified next-token prediction framework representing items as discrete RQ-VAE coordinates.
+- [[Generalized Advantage Estimation]]: An exponential-decay variance-bias trade-off formulation ($\lambda \in [0, 1]$) reconciling Monte Carlo and TD error for policy and value network updates.
 - [[LC-Rec]]: Language-Collaborative Recommender, a generative recommendation framework utilizing Sinkhorn-Knopp optimal transport constraints and multi-task alignment.
 - [[LONGER]]: ByteDance's end-to-end ultra-long (10K) sequence transformer for industrial recommenders, replacing two-stage retrieval with token merge, recent-k query sampling, global tokens, and KV-cache serving.
 - [[LLaRA]]: Large Language-Recommendation Assistant, an aligned multi-modal sequential recommendation framework using an MLP projector (SR2LLM).
@@ -98,9 +101,11 @@ This is the content-oriented catalog of the wiki. The LLM updates this file when
 - [[Grouped Query Attention]]: An architectural optimization for MHA that partitions Query heads into groups to share Key/Value caches, maximizing efficiency and accuracy.
 - [[Graphormer]]: A graph-configured Transformer architecture incorporating centrality, topological distance (SPD), and edge features directly into the self-attention logits.
 - [[GShard]]: Google's 600B parameter MoE architecture that introduced Top-2 gating, proportional random dropping, and a differentiable auxiliary loss to successfully scale transformers across distributed TPUs.
+- [[InfoNCE Loss]]: Information Noise-Contrastive Estimation loss for contrastive learning and multi-modal alignment, optimizing mutual information lower bounds via cross-entropy equivalence.
 - [[KV Cache]]: The Key-Value cache optimization used during autoregressive generation to trade VRAM for compute speed.
 - [[Locality-Sensitive Hashing]]: Hash families where collision probability equals similarity — covering MinHash's min-signature trick for Jaccard estimation, banding, and its role in web-scale pre-training deduplication.
 - [[Long-Context Positional Encoding]]: Why relative RoPE still fails to extrapolate (low-frequency subspaces), and the full remedy landscape — PI, sliding-window truncation, NTK-aware / Dynamic NTK / YaRN frequency scaling, base enlargement — plus the DeepSeek-V4 1M-context case study.
+- [[LoRA]]: Low-Rank Adaptation, parameter-efficient fine-tuning via decomposed low-rank update matrices ($A \times B$) with zero inference latency via weight merging.
 - [[Perplexity]]: The exponentiated average negative log-likelihood metric, doubling as an LM evaluation metric and a data-quality heuristic for pre-training corpus filtering.
 - [[mHC]]: Manifold-Constrained Hyper-Connections, a method for widening residual streams while maintaining stability by projecting matrices onto the Birkhoff polytope using the Sinkhorn-Knopp algorithm.
 - [[Model Flops Utilization]]: A hardware-efficiency metric measuring actual vs. theoretical peak FLOPs, crucial for scaling recommendations.
@@ -112,8 +117,10 @@ This is the content-oriented catalog of the wiki. The LLM updates this file when
 - [[OneRec]]: An end-to-end, single-stage generative recommendation architecture scaling up to 1B parameters with Sparse MoE.
 - [[OneRec-V2]]: Second-generation generative recommendation model from Kuaishou Inc., scaling up to 8B with projection-free KV generation and user feedback RL.
 - [[Positional Encoding]]: Techniques (like Sinusoidal, RoPE, and ALiBi) used to inject sequence order information into Transformers, compensating for their lack of recurrence.
+- [[Proximal Policy Optimization]]: An on-policy/off-policy hybrid policy gradient algorithm optimizing a clipped surrogate objective with first-order methods, serving as the foundational engine for LLM RLHF.
 - [[R-GCN]]: Relational Graph Convolutional Networks, a multi-relational GNN designed to propagate messages along distinct edge categories.
 - [[RAG]]: Advanced Retrieval-Augmented Generation architectures including dense/sparse retrieval, reranking, and Knowledge Graph extraction.
+- [[Reward Model]]: A preference-trained scalar scoring model based on the Bradley-Terry comparison loss that quantifies human alignment in LLM RLHF.
 - [[RankMixer]]: A compute-bound, GPU-friendly ranking network architecture from ByteDance featuring Per-Token FFNs and ReLU-MoE routing.
 - [[Request Level Batching]]: A user-centric, request-wise sample batching layout that amortizes user history sequence transfer and encoding across target candidates.
 - [[Residual Connections]]: Explains the identity mapping property and its variations, including mHC for widening the residual stream.
