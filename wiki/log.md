@@ -555,6 +555,19 @@ Created the master compilation page `wiki/research/Mixture of Experts Summary.md
 - Updated `wiki/entities/Fine-tuning.md`, `wiki/entities/RLHF.md`, and `wiki/research/RLHF Summary.md` with reciprocal wikilinks.
 - Cataloged `[[DPO Summary]]` and `[[Direct Preference Optimization]]` in `wiki/index.md`.
 
+## [2026-09-14] Ingest | GRPO: Group Relative Policy Optimization
+- Ingested raw source `raw/LLM/RL/GRPO-Group Relative Policy Optimization.md`.
+- Created structured research summary `wiki/research/GRPO Summary.md`:
+  - Detailed background, motivations, and the three major pain points of Critic models in large language model RL.
+  - Architectural and topological comparison between traditional PPO and DeepSeek's Critic-Free GRPO.
+  - Embedded comparison diagram `wiki/media/demonstration_PPO_GRPO.png`.
+  - Rigorous mathematical formulations for Advantage calculation (group sampling, scalar rewards, and intra-group Z-score standardization), length normalization ($\frac{1}{|o_i|}$), and decoupled non-negative unbiased KL divergence regularization.
+  - Complete algorithmic pseudo-code and computational workflow.
+  - In-depth analysis of critical engineering realities: memory/compute efficiency, variance collapse on all-pass/all-fail queries, credit assignment limitations, symbiosis with RLVR (Rule-based Verifiable Rewards), and multi-tier defenses against Reward Hacking.
+- Created reusable concept/entity page `wiki/entities/Group Relative Policy Optimization.md`.
+- Updated `wiki/index.md` to catalog `[[GRPO Summary]]` and `[[Group Relative Policy Optimization]]`.
+
+
 
 
 

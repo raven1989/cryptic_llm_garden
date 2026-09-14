@@ -59,6 +59,7 @@ This is the content-oriented catalog of the wiki. The LLM updates this file when
 - [[Proximal Policy Optimization Summary]]: A comprehensive deep dive into PPO and LLM RLHF alignment, breaking down the surrogate objective, Importance Sampling token probabilities, four-model orchestration (Actor, Critic, RM, Reference), Advantage estimation (MC, TD, GAE), Critic regression and pessimistic bounds, and PPO-Clip dynamics.
 - [[RLHF Summary]]: Comprehensive deep dive into Reinforcement Learning from Human Feedback, covering SFT limitations, 3-stage alignment architecture, Episodic MDP formulation, Bradley-Terry reward modeling, PPO/DPO/GRPO optimization paradigms, empirical impacts, and emerging frontiers (RLAIF, iterative post-training, reasoning via RLVR).
 - [[DPO Summary]]: Detailed breakdown of Direct Preference Optimization (DPO), covering the closed-form implicit reward derivation from KL-constrained RL, Push-Pull loss dynamics, gradient weighting on hard mistakes, and batch vectorized PyTorch implementations (concatenation, chunking, and LoRA/precomputed reference speedups).
+- [[GRPO Summary]]: DeepSeek's Group Relative Policy Optimization, eliminating the Critic model by normalizing group rewards to estimate advantages for memory-efficient mathematical and reasoning RL, featuring length normalization and unbiased non-negative KL regularization.
 
 ## Media Companion (Books, Movies, etc.)
 
@@ -103,6 +104,7 @@ This is the content-oriented catalog of the wiki. The LLM updates this file when
 - [[FSQ]]: Finite Scalar Quantization, a highly simplified, codebook-free alternative to VQ that replaces vector quantization with bounded rounding, completely eliminating auxiliary losses and index collapse.
 - [[Grouped Query Attention]]: An architectural optimization for MHA that partitions Query heads into groups to share Key/Value caches, maximizing efficiency and accuracy.
 - [[Graphormer]]: A graph-configured Transformer architecture incorporating centrality, topological distance (SPD), and edge features directly into the self-attention logits.
+- [[Group Relative Policy Optimization]]: A Critic-free RL algorithm introduced by DeepSeek estimating advantages via group-relative reward normalization.
 - [[GShard]]: Google's 600B parameter MoE architecture that introduced Top-2 gating, proportional random dropping, and a differentiable auxiliary loss to successfully scale transformers across distributed TPUs.
 - [[InfoNCE Loss]]: Information Noise-Contrastive Estimation loss for contrastive learning and multi-modal alignment, optimizing mutual information lower bounds via cross-entropy equivalence.
 - [[KV Cache]]: The Key-Value cache optimization used during autoregressive generation to trade VRAM for compute speed.
