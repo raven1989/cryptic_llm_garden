@@ -16,11 +16,11 @@ The process of evolving a pre-trained base model into an instruction-following a
 
 ## Alignment Strategies
 
-*   **Reinforcement Learning from Human Feedback (RLHF):**
+*   **[[RLHF|Reinforcement Learning from Human Feedback (RLHF)]]:**
     *   **Phase 1:** Train a [[Reward Model]] (RM) using human rankings of multiple responses to a single prompt (based on the Bradley-Terry preference model).
-    *   **Phase 2:** Use [[Proximal Policy Optimization]] (PPO) to treat the LLM as an agent, maximizing the RM's score. KL Divergence from a frozen reference model prevents the LLM from collapsing into unnatural language just to "hack" the reward (see detailed breakdown in [[Proximal Policy Optimization Summary]]).
-*   **Direct Preference Optimization (DPO):**
-    *   The modern industrial standard. It bypasses the fragile RM and complex PPO completely.
+    *   **Phase 2:** Use [[Proximal Policy Optimization]] (PPO) to treat the LLM as an agent, maximizing the RM's score. KL Divergence from a frozen reference model prevents the LLM from collapsing into unnatural language just to "hack" the reward (see detailed breakdown in [[Proximal Policy Optimization Summary]] and complete framework in [[RLHF Summary]]).
+*   **[[Direct Preference Optimization|Direct Preference Optimization (DPO)]]:**
+    *   The modern industrial standard. It bypasses the fragile RM and complex PPO completely (see detailed breakdown in [[DPO Summary]]).
     *   Given a dataset of paired responses $(x, y_{chosen}, y_{rejected})$, it uses a binary classification loss directly on the SFT model to increase the probability of the chosen answer and decrease the rejected one.
 
 ## Parameter-Efficient Fine-Tuning (PEFT)

@@ -511,10 +511,51 @@ Created the master compilation page `wiki/research/Mixture of Experts Summary.md
 - Updated `wiki/entities/Fine-tuning.md` cross-linking to `[[LoRA]]`.
 - Updated central index `wiki/index.md` cataloging `[[LoRA]]` under Entities & Concepts.
 
-## [2026-09-10] Create | InfoNCE Loss Entity
-- Created dedicated entity page `wiki/entities/InfoNCE Loss.md` detailing the mathematical formula, mutual information lower bound derivation, Softmax cross-entropy equivalence, the role of temperature $\tau$ on hard negatives, and PyTorch implementations (In-Batch negatives and explicit negative queue).
-- Documented key industrial variants across CV, NLP, Multimodal (CLIP), and RecSys.
-- Cataloged `[[InfoNCE Loss]]` in `wiki/index.md`.
+## [2026-09-10] Ingest | RLHF (Reinforcement Learning from Human Feedback)
+- Ingested raw source `raw/LLM/RL/RLHF.md`.
+- Created structured research summary page `wiki/research/RLHF Summary.md` detailing:
+  - Limitations of SFT (imitation vs. preference understanding, generalization bottleneck).
+  - SFT vs. RLHF core distinction table and InstructGPT 1.3B empirical validation.
+  - Three-stage alignment training pipeline (Pre-training, SFT with task vs. dialogue OASST data, and RLHF).
+  - Mathematical formalization of RLHF via Episodic Markov Decision Process (MDP).
+  - Native embedding of `wiki/media/RLHF经典三步法示意图.png` in the core workflow section.
+  - Bradley-Terry preference modeling, pairwise ranking conversion ($\binom{K}{2}$), and NLL reward loss.
+  - Policy optimization evolution comparing PPO (with Alignment Tax & PPO-ptx), DPO (implicit reward & classification formulation), and GRPO (Critic-free group advantage for RLVR).
+  - Empirical benefits (TruthfulQA) and practical challenges (Reward Hacking, evaluation dilemmas, multimodal/cultural alignment, RLAIF, iterative post-training, and reasoning emergence via o1/DeepSeek-R1).
+- Created reusable concept/entity page `wiki/entities/RLHF.md` with episodic MDP mapping, formula derivation, key challenges, and embedded workflow diagram.
+- Updated `wiki/entities/Fine-tuning.md`, `wiki/entities/Reward Model.md`, `wiki/entities/Proximal Policy Optimization.md`, and `wiki/research/Proximal Policy Optimization Summary.md` with reciprocal wikilinks.
+- Cataloged `[[RLHF Summary]]` and `[[RLHF]]` in `wiki/index.md`.
+
+## [2026-09-10] Ingest | Direct Preference Optimization (DPO)
+- Created structured research summary page `wiki/research/DPO Summary.md` detailing:
+  - Theoretical derivation of the closed-form implicit reward from KL-constrained RL objectives.
+  - Elimination of the partition function $Z(x)$ in the Bradley-Terry preference difference.
+  - Mathematical and conceptual rationale for the reference model denominator $\pi_{ref}$ (length bias mitigation, relative gain measurement, and anti-collapse anchor).
+  - Push-Pull loss dynamics and dynamic gradient weighting on hard mistakes ($\sigma(\hat{r}_l - \hat{r}_w)$).
+  - Production batch vectorized PyTorch implementation (concatenation into $(2N, \text{seq\_len})$, response-only masking via `-100`, `.chunk(2)` splitting, and backward propagation).
+  - High-throughput engineering speedup strategies (adapter-toggling with LoRA, offline precomputing reference logps, and forward chunking).
+  - Multi-dimensional contrast table against PPO, and key variants (IPO, KTO, Iterative/Online DPO).
+- Created reusable concept/entity page `wiki/entities/Direct Preference Optimization.md`.
+- Ingested supplementary raw source `raw/LLM/大模型原理与架构/08_alignment/8.3_dpo.md` into both `wiki/research/DPO Summary.md` and `wiki/entities/Direct Preference Optimization.md`, linking ORPO, Constitutional AI, and Instruction Hierarchy (IH) adversarial RL alignment.
+
+## [2026-09-14] Enhancement | Generalized Advantage Estimation (GAE) Mathematical & Intuitive Deep-Dive
+- Comprehensive update to `wiki/entities/Generalized Advantage Estimation.md`:
+  - Formal intuitive synthesis: advantage defined as the discounted sum of step-level surprises/gains ($\delta_t$) anchoring the terminal `<EOS>` RM reward back to prefix tokens via the $\lambda$ contraction parameter.
+  - Preceding foundations (Pure Monte Carlo & REINFORCE): recursive formulation $G_t = r_t + \gamma G_{t+1}$, zero need for a Critic model under pure definition-based cumulative summation, and why learning a baseline Critic $V(s_t)$ is only introduced to suppress variance.
+  - LLM RLHF composite rewards $r_t$: intermediate token-level pointwise KL divergence penalties ($t < T$) and terminal sparse environment evaluation ($R_{\text{RM}}$ at $t = T$).
+  - Precise calculation of token-level KL divergence in causal contexts: conditioned on identical historical prefix $s_t = (x, y_{<t})$, pointwise log-probability difference, Schulman's non-negative estimator ($u - 1 - \log u$), and vectorized parallel forward computation via Transformer causal attention masking.
+  - MC expansion physical intuition: $G_t = R_{\text{RM}} - \beta \sum_{k=t}^T \text{KL}_k$ as anchoring on the terminal reward while subtracting all subsequent divergence penalties.
+  - Temporal Difference (TD) foundations & 1-Step equivalence: physical meaning of TD error $\delta_t$, mathematical proof that $\hat{A}_t^{\text{1-Step TD}} = \delta_t$.
+  - Terminal boundary condition: rigorous proof of $\delta_T = (R_{\text{RM}} - \beta \text{KL}_T) - V(s_T)$ through $V(s_{T+1}) \equiv 0$, emphasizing the critical subtraction of $V(s_T)$ to preserve the baseline variance reduction property.
+  - Three-paradigm unified spectrum table: mathematically juxtaposing 1-Step TD ($\lambda = 0$), GAE ($0 < \lambda < 1$, industry standard $\gamma=1.0, \lambda=0.95$), and pure Monte Carlo ($\lambda = 1$ via telescoping sum).
+  - Cross-linking to `[[Proximal Policy Optimization]]`, `[[Reward Model]]`, `[[Critic Model]]`, and `[[RLHF]]`.
+
+
+- Fixed missing Obsidian reciprocal wikilinks from `wiki/research/DPO Summary.md` to `[[Direct Preference Optimization]]` in both lead definition and references section.
+- Updated `wiki/entities/Fine-tuning.md`, `wiki/entities/RLHF.md`, and `wiki/research/RLHF Summary.md` with reciprocal wikilinks.
+- Cataloged `[[DPO Summary]]` and `[[Direct Preference Optimization]]` in `wiki/index.md`.
+
+
 
 
 

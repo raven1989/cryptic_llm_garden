@@ -57,6 +57,8 @@ This is the content-oriented catalog of the wiki. The LLM updates this file when
 - [[MCCRS Summary]]: UESTC, Tongji, and SWUFE's Multi-Type Context-Aware Conversational Recommender System using Mixture-of-Experts.
 - [[SeqLLM Summary]]: WeChat Pay and SJTU's framework injecting long behavioral-sequence modeling into LLMs for high-stakes merchant risk control and SOTA recommendation.
 - [[Proximal Policy Optimization Summary]]: A comprehensive deep dive into PPO and LLM RLHF alignment, breaking down the surrogate objective, Importance Sampling token probabilities, four-model orchestration (Actor, Critic, RM, Reference), Advantage estimation (MC, TD, GAE), Critic regression and pessimistic bounds, and PPO-Clip dynamics.
+- [[RLHF Summary]]: Comprehensive deep dive into Reinforcement Learning from Human Feedback, covering SFT limitations, 3-stage alignment architecture, Episodic MDP formulation, Bradley-Terry reward modeling, PPO/DPO/GRPO optimization paradigms, empirical impacts, and emerging frontiers (RLAIF, iterative post-training, reasoning via RLVR).
+- [[DPO Summary]]: Detailed breakdown of Direct Preference Optimization (DPO), covering the closed-form implicit reward derivation from KL-constrained RL, Push-Pull loss dynamics, gradient weighting on hard mistakes, and batch vectorized PyTorch implementations (concatenation, chunking, and LoRA/precomputed reference speedups).
 
 ## Media Companion (Books, Movies, etc.)
 
@@ -91,6 +93,7 @@ This is the content-oriented catalog of the wiki. The LLM updates this file when
 - [[DeepSeek Load Balancing]]: The mathematical evolution of DeepSeek's MoE routing load-balancing strategies, covering V2's multi-faceted soft auxiliary losses ($L_{ExpBal}, L_{DevBal}, L_{CommBal}$) and V3's groundbreaking Auxiliary-Loss-Free dynamic bias routing.
 - [[DeepSeek Shared Experts]]: An architectural innovation in DeepSeekMoE that isolates general knowledge into a set of permanently active experts, allowing the remaining routed experts to achieve fine-grained specialization.
 - [[DeepSeek Sparse Attention]]: DeepSeek-V3.2's sparse attention mechanism that uses a lightning indexer to select top-k tokens, reducing computational complexity for long contexts.
+- [[Direct Preference Optimization]]: An implicit reward-based preference alignment algorithm that eliminates explicit reward models and online reinforcement learning via a closed-form substitution into the Bradley-Terry preference loss.
 - [[DOM State Compression]]: Techniques for stripping non-interactive elements from HTML to reduce token usage and improve privacy.
 - [[DSSM]]: Deep Structured Semantic Model, a deep architecture projecting queries and documents into a shared semantic space via letter-trigram word hashing and discriminative clickthrough training, enabling semantic matching beyond keyword overlap.
 - [[EASE]]: Embarrassingly Shallow Autoencoders, a linear collaborative filtering model solved via a regularized closed-form matrix inverse.
@@ -121,6 +124,7 @@ This is the content-oriented catalog of the wiki. The LLM updates this file when
 - [[R-GCN]]: Relational Graph Convolutional Networks, a multi-relational GNN designed to propagate messages along distinct edge categories.
 - [[RAG]]: Advanced Retrieval-Augmented Generation architectures including dense/sparse retrieval, reranking, and Knowledge Graph extraction.
 - [[Reward Model]]: A preference-trained scalar scoring model based on the Bradley-Terry comparison loss that quantifies human alignment in LLM RLHF.
+- [[RLHF]]: Reinforcement Learning from Human Feedback, the core alignment paradigm aligning LLM outputs with human preferences and the 3H principles (Helpful, Honest, Harmless) via SFT, Reward Modeling, and RL policy optimization.
 - [[RankMixer]]: A compute-bound, GPU-friendly ranking network architecture from ByteDance featuring Per-Token FFNs and ReLU-MoE routing.
 - [[Request Level Batching]]: A user-centric, request-wise sample batching layout that amortizes user history sequence transfer and encoding across target candidates.
 - [[Residual Connections]]: Explains the identity mapping property and its variations, including mHC for widening the residual stream.

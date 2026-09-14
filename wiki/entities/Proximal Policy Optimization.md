@@ -7,7 +7,7 @@ sources: ["[[raw/LLM/RL/RL — Proximal Policy Optimization (PPO) Explained.md]]
 
 # Proximal Policy Optimization (PPO)
 
-**近端策略优化（Proximal Policy Optimization, PPO）** 是由 OpenAI 于 2017 年提出的一种策略梯度强化学习算法，也是现代大语言模型（LLM）人类偏好对齐（RLHF）的事实标准基线之一。
+**近端策略优化（Proximal Policy Optimization, PPO）** 是由 OpenAI 于 2017 年提出的一种策略梯度强化学习算法，也是现代大语言模型（LLM）人类偏好对齐（[[RLHF]]）的事实标准基线之一。
 
 ## 核心设计与突破
 
@@ -28,4 +28,4 @@ sources: ["[[raw/LLM/RL/RL — Proximal Policy Optimization (PPO) Explained.md]]
 * **[[Reward Model]]（$r_\psi$）**：提供序列级质量评价；
 * **Reference Model（$\pi_{ref}$）**：提供 Token 级 KL 散度约束，防止模型语义漂移与 Reward Hacking。
 
-参见完整研究报告：[[Proximal Policy Optimization Summary]]，以及对齐全流程：[[Fine-tuning]]。
+参见完整研究报告：[[RLHF Summary]]、[[Proximal Policy Optimization Summary]]，核心框架：[[RLHF]]，以及对齐全流程：[[Fine-tuning]]。

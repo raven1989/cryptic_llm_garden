@@ -371,8 +371,9 @@ def compute_critic_loss(current_values, old_values, returns, clip_eps=0.2):
 ## 八、相关实体与核心交叉链接
 
 - 核心架构与算子：[[Transformers]], [[Decoder-Only Models]], [[Self-Attention Mechanism]]
-- 训练与对齐全流程：[[Fine-tuning]], [[Pre-training Large Language Models]]
+- 训练与对齐全流程：[[RLHF Summary]], [[RLHF]], [[Fine-tuning]], [[Pre-training Large Language Models]]
 - 专属实体页面：
+  - [[RLHF]]：基于人类反馈强化学习的核心概念、MDP 形式化与演进图谱
   - [[Proximal Policy Optimization]]：算法理论演进与工业影响
   - [[Generalized Advantage Estimation]]：方差与偏差权衡的优势递推算法
   - [[Reward Model]]：人类偏好建模与打分器
